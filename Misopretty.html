@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Income Streams Hub — Your Complete Guide to Earning</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --white: #ffffff;
+  --soft-white: #fafafa;
+  --rose: #c2848c;
+  --rose-dark: #a06870;
+  --rose-light: #f5e8e9;
+  --gold: #c9a97e;
+  --gold-light: #f0e4d0;
+  --ink: #222222;
+  --ink-mid: #444444;
+  --ink-soft: #777777;
+  --ink-faint: #aaaaaa;
+  --border: #e8dede;
+  --border-light: #f2ecec;
+  --petal: #fdf8f8;
+  --sand: #faf5f0;
+  --linen: #f8f2ee;
+  --shadow-sm: 0 2px 14px rgba(160,100,100,0.07);
+  --shadow-md: 0 6px 32px rgba(160,100,100,0.11);
+  --mauve: #b07a80;
+  --dusty-rose: #d4a5a0;
+  --deep-rose: #a06870;
+  --warm-dark: #222222;
+  --warm-gray: #777777;
+  --light-gray: #aaaaaa;
+  --rose-mist: #f5e8e9;
+  --blush: #fdf0ee;
+  --cream: #ffffff;
+  --radius: 18px;
+  --radius-sm: 10px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lato',sans-serif;background:#ffffff;color:#222222;line-height:1.75;}
+.page{display:none;}
+.page.active{display:block;}
+a{color:var(--rose-dark);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* LANDING */
+#landing{
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;padding:70px 24px 60px;
+  background:#ffffff;position:relative;overflow:hidden;
+}
+#landing::before{content:'';position:absolute;width:700px;height:700px;border-radius:50%;
+  border:1px solid rgba(200,165,160,0.15);
+  top:-280px;right:-180px;pointer-events:none;}
+#landing::after{content:'';position:absolute;width:500px;height:500px;border-radius:50%;
+  border:1px solid rgba(200,165,160,0.10);
+  bottom:-150px;left:-150px;pointer-events:none;}
+.landing-eyebrow{
+  display:inline-block;background:var(--gold-light);color:var(--gold);
+  font-size:11px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;
+  padding:7px 22px;border-radius:50px;margin-bottom:32px;border:1px solid rgba(200,169,126,0.3);}
+.landing-title{
+  font-family:'Playfair Display',serif;font-size:clamp(42px,7vw,82px);
+  font-weight:500;color:#222222;line-height:1.08;margin-bottom:22px;max-width:820px;letter-spacing:-0.01em;}
+.landing-title em{color:var(--rose);font-style:italic;}
+.landing-sub{font-size:16px;color:#777777;max-width:560px;margin:0 auto 22px;font-weight:300;line-height:1.85;}
+.landing-disclaimer{
+  font-size:11px;color:#999999;max-width:640px;margin:0 auto 42px;
+  line-height:1.65;padding:16px 22px;border:1px solid var(--border);
+  border-radius:var(--radius-sm);background:#ffffff;}
+.landing-stats{display:flex;gap:50px;margin-bottom:50px;flex-wrap:wrap;justify-content:center;}
+.stat{text-align:center;}
+.stat-num{font-family:'Playfair Display',serif;font-size:40px;font-weight:500;color:#222222;}
+.stat-label{font-size:10px;color:#aaaaaa;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;margin-top:4px;}
+.enter-btn{
+  background:#222222;color:#fff;border:none;
+  padding:18px 54px;font-size:11px;font-family:'Lato',sans-serif;
+  font-weight:700;letter-spacing:0.18em;text-transform:uppercase;border-radius:50px;
+  cursor:pointer;transition:all 0.3s;}
+.enter-btn:hover{background:var(--rose-dark);transform:translateY(-2px);box-shadow:var(--shadow-md);}
+
+/* HUB */
+#hub{background:#ffffff;min-height:100vh;padding:40px 24px 80px;}
+.hub-header{text-align:center;padding:50px 0 36px;max-width:900px;margin:0 auto;}
+.hub-header h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,54px);font-weight:500;margin-bottom:12px;color:#222222;letter-spacing:-0.01em;}
+.hub-header p{color:#777777;font-size:15px;font-weight:300;max-width:580px;margin:0 auto;line-height:1.8;}
+.hub-disclaimer{
+  background:#fffaf5;border:1px solid var(--gold-light);border-radius:var(--radius-sm);
+  padding:14px 20px;font-size:12px;color:#887755;max-width:940px;margin:0 auto 36px;
+  text-align:center;line-height:1.6;}
+.search-bar{
+  display:flex;max-width:500px;margin:0 auto 44px;
+  background:#fff;border:1.5px solid var(--border);border-radius:50px;
+  overflow:hidden;box-shadow:var(--shadow-sm);}
+.search-bar input{flex:1;border:none;padding:14px 22px;font-family:'Lato',sans-serif;font-size:14px;outline:none;background:transparent;color:#222222;}
+.search-bar input::placeholder{color:#cccccc;}
+.search-bar button{background:#222222;color:#fff;border:none;padding:14px 26px;font-family:'Lato',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:background 0.2s;}
+.search-bar button:hover{background:var(--rose-dark);}
+.category-tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:1100px;margin:0 auto 44px;}
+.cat-tab{
+  background:#fff;border:1.5px solid var(--border);color:#777777;
+  padding:8px 20px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:all 0.2s;font-family:'Lato',sans-serif;}
+.cat-tab:hover,.cat-tab.active{background:#222222;color:#fff;border-color:#222222;}
+.streams-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;max-width:1340px;margin:0 auto;}
+.stream-card{
+  background:#fff;border-radius:var(--radius);padding:28px;
+  border:1.5px solid var(--border-light);box-shadow:var(--shadow-sm);
+  cursor:pointer;transition:all 0.25s;position:relative;overflow:hidden;}
+.stream-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--card-color,var(--dusty-rose));}
+.stream-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--border);}
+.card-emoji{font-size:30px;margin-bottom:14px;display:block;}
+.card-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:500;margin-bottom:8px;color:#222222;}
+.card-desc{font-size:13px;color:#777777;line-height:1.65;margin-bottom:16px;font-weight:300;}
+.card-meta{display:flex;gap:8px;flex-wrap:wrap;}
+.card-tag{font-size:10px;font-weight:700;padding:3px 11px;border-radius:50px;background:var(--rose-mist);color:var(--rose-dark);letter-spacing:0.06em;text-transform:uppercase;}
+.card-tag.cost{background:var(--gold-light);color:#8a6a30;}
+
+/* DETAIL */
+#detail{background:#ffffff;min-height:100vh;padding:40px 24px 100px;}
+.detail-wrap{max-width:860px;margin:0 auto;}
+.back-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  background:#fff;border:1.5px solid var(--border);color:#777777;
+  padding:9px 22px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  cursor:pointer;margin-bottom:30px;transition:all 0.2s;font-family:'Lato',sans-serif;}
+.back-btn:hover{background:#222222;color:#fff;border-color:#222222;}
+.detail-hero{background:#fff;border-radius:var(--radius);padding:40px;border:1.5px solid var(--border-light);box-shadow:var(--shadow-sm);margin-bottom:24px;}
+.detail-emoji{font-size:50px;display:block;margin-bottom:16px;}
+.detail-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:5px 14px;border-radius:50px;margin-bottom:16px;background:var(--gold-light);color:var(--gold);}
+.detail-title{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,44px);font-weight:500;margin-bottom:14px;line-height:1.15;color:#222222;letter-spacing:-0.01em;}
+.detail-desc{font-size:15px;color:#666666;line-height:1.85;margin-bottom:24px;font-weight:300;}
+.detail-meta{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:14px;padding-top:22px;border-top:1px solid var(--border-light);}
+.meta-item{background:var(--petal);border-radius:var(--radius-sm);padding:14px 16px;border:1px solid var(--border-light);}
+.meta-label{font-size:9px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa;margin-bottom:5px;}
+.meta-value{font-size:14px;font-weight:700;color:#222222;}
+.section-block{background:#fff;border-radius:var(--radius);padding:34px;border:1.5px solid var(--border-light);box-shadow:var(--shadow-sm);margin-bottom:22px;}
+.section-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:500;margin-bottom:20px;color:#222222;padding-bottom:14px;border-bottom:1px solid var(--border-light);}
+.resource-grid{display:grid;gap:14px;}
+.resource-card{background:var(--petal);border-radius:var(--radius-sm);padding:18px 20px;border:1px solid var(--border-light);}
+.resource-type{font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:3px 10px;border-radius:50px;display:inline-block;margin-bottom:8px;}
+.type-free{background:#eef5e8;color:#4a7040;}
+.type-paid{background:var(--gold-light);color:#8a6a30;}
+.type-research{background:var(--rose-mist);color:var(--rose-dark);}
+.type-legal{background:#f0eef8;color:#6a4a90;}
+.type-platform{background:var(--gold-light);color:#7a5a20;}
+.resource-name{font-size:14px;font-weight:700;margin-bottom:5px;color:#222222;}
+.resource-desc{font-size:13px;color:#777777;line-height:1.65;margin-bottom:10px;font-weight:300;}
+.resource-link{font-size:13px;color:var(--rose-dark);font-weight:700;}
+.tip-box{background:#fff;border:1.5px solid var(--gold-light);border-left:3px solid var(--gold);border-radius:var(--radius-sm);padding:22px 24px;margin-bottom:22px;}
+.tip-box-title{font-size:11px;font-weight:700;color:var(--gold);margin-bottom:8px;letter-spacing:0.12em;text-transform:uppercase;}
+.tip-box p{font-size:14px;color:#555555;line-height:1.75;font-weight:300;}
+.warn-box{background:#fff;border:1.5px solid var(--border);border-left:3px solid var(--rose);border-radius:var(--radius-sm);padding:22px 24px;margin-bottom:22px;}
+.warn-box-title{font-size:11px;font-weight:700;color:var(--rose-dark);margin-bottom:8px;letter-spacing:0.12em;text-transform:uppercase;}
+.warn-box p{font-size:14px;color:#555555;line-height:1.75;font-weight:300;}
+.disclaimer-box{background:#fff;border:1.5px solid var(--border);border-left:3px solid #ccbbbb;border-radius:var(--radius-sm);padding:22px 24px;margin-bottom:22px;}
+.disclaimer-box-title{font-size:11px;font-weight:700;color:#888888;margin-bottom:8px;letter-spacing:0.12em;text-transform:uppercase;}
+.disclaimer-box p{font-size:13px;color:#777777;line-height:1.75;font-weight:300;}
+.steps-list{display:flex;flex-direction:column;gap:14px;}
+.step-item{display:flex;gap:16px;align-items:flex-start;background:var(--petal);border-radius:var(--radius-sm);padding:16px 18px;border:1px solid var(--border-light);}
+.step-num{background:#222222;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;}
+.step-text{font-size:14px;color:#444444;line-height:1.65;font-weight:300;}
+.note-inline{font-size:12px;color:#aaaaaa;font-style:italic;margin-top:20px;padding-top:14px;border-top:1px solid var(--border-light);}
+
+@media(max-width:600px){
+  .streams-grid{grid-template-columns:1fr;}
+  .detail-hero{padding:24px;}
+  .section-block{padding:22px;}
+}
+</style>
+</head>
+<body>
+
+<!-- LANDING -->
+<div id="landing" class="page">
+  <div class="landing-eyebrow">100+ Income Streams · From $0 to Start</div>
+  <h1 class="landing-title">Build Your Own<br><em>Income Streams</em></h1>
+  <p class="landing-sub">A research-backed guide to over 100 ways to earn — from zero cost to $1,000 startup. Detailed resources, free tools, and step-by-step guidance for every stream.</p>
+  <div class="landing-disclaimer">
+    ⚠️ <strong>Important Disclaimer:</strong> This website is for educational and informational purposes only. Nothing on this site constitutes financial, investment, legal, tax, or professional advice of any kind. All income streams carry risk and results will vary widely based on individual effort, skill, market conditions, and other factors. You should conduct your own thorough due diligence and consult a qualified financial advisor, attorney, accountant, or other licensed professional before making any financial, investment, or business decisions. We are not responsible for any outcomes resulting from the use of information on this site.
+  </div>
+  <div class="landing-stats">
+    <div class="stat"><div class="stat-num">100+</div><div class="stat-label">Income Streams</div></div>
+    <div class="stat"><div class="stat-num">$0</div><div class="stat-label">Min. to Start</div></div>
+    <div class="stat"><div class="stat-num">Free</div><div class="stat-label">Resources Included</div></div>
+    <div class="stat"><div class="stat-num">2025</div><div class="stat-label">Updated</div></div>
+  </div>
+  <button class="enter-btn" onclick="showHub()">Explore All Income Streams →</button>
+</div>
+
+<!-- HUB -->
+<div id="hub" class="page">
+  <div class="hub-header">
+    <h1>Income Streams Hub</h1>
+    <p>Browse 100+ income streams. Click any card for full details, sources, free resources, and step-by-step guidance.</p>
+  </div>
+  <div class="hub-disclaimer">
+    ⚠️ <strong>Disclaimer:</strong> This is not financial or investment advice. All content is strictly for educational purposes. Results vary. Always do your own research and consult qualified professionals before making any business, financial, or investment decisions.
+  </div>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search income streams..." oninput="filterCards()">
+    <button onclick="filterCards()">Search</button>
+  </div>
+  <div class="category-tabs">
+    <div class="cat-tab active" onclick="filterCat('all',this)">All</div>
+    <div class="cat-tab" onclick="filterCat('ecommerce',this)">E-Commerce</div>
+    <div class="cat-tab" onclick="filterCat('reselling',this)">Reselling</div>
+    <div class="cat-tab" onclick="filterCat('creative',this)">Creative</div>
+    <div class="cat-tab" onclick="filterCat('digital',this)">Digital Products</div>
+    <div class="cat-tab" onclick="filterCat('writing',this)">Writing</div>
+    <div class="cat-tab" onclick="filterCat('services',this)">Services</div>
+    <div class="cat-tab" onclick="filterCat('investments',this)">Investing</div>
+    <div class="cat-tab" onclick="filterCat('physical',this)">Physical Business</div>
+    <div class="cat-tab" onclick="filterCat('gig',this)">Gig Work</div>
+    <div class="cat-tab" onclick="filterCat('content',this)">Content & Social</div>
+  </div>
+  <div class="streams-grid" id="streamsGrid"></div>
+</div>
+
+<!-- DETAIL -->
+<div id="detail" class="page">
+  <div class="detail-wrap" id="detailContent"></div>
+</div>
+
+<script>
+const C = {
+  rose:'#c08878', mauve:'#b07a80', deeprose:'#9a5560',
+  amber:'#c97030', blush:'#d4a5a0', warm:'#a07060',
+  sage:'#8a9a70', coral:'#d4705a', plum:'#9a6070',
+  gold:'#c9a030', terracotta:'#c07050', fig:'#8a5060',
+  dusty:'#b08888', sienna:'#a06040', clay:'#b07060',
+};
+
+const streams = [
+// ─── E-COMMERCE ───
+{id:'dropshipping',emoji:'📦',title:'Dropshipping',cat:'ecommerce',cost:'$0–$100',color:C.rose,
+ tags:['No Inventory','Remote','Beginner'],
+ desc:'Sell products online without holding inventory. Supplier ships directly to your customer. You keep the margin.'},
+{id:'print_on_demand',emoji:'🎨',title:'Print on Demand',cat:'ecommerce',cost:'$0',color:C.mauve,
+ tags:['Creative','Passive','Zero Inventory'],
+ desc:'Design products — shirts, mugs, phone cases, totes — and a print partner fulfills every order automatically.'},
+{id:'etsy_shop',emoji:'🛍️',title:'Etsy Shop',cat:'ecommerce',cost:'$0–$50',color:C.amber,
+ tags:['Handmade','Creative','E-Commerce'],
+ desc:'Sell handmade, vintage, or digital goods on one of the largest craft marketplaces in the world.'},
+{id:'amazon_fba',emoji:'🏭',title:'Amazon FBA',cat:'ecommerce',cost:'$500–$1000',color:C.gold,
+ tags:['Scalable','E-Commerce','Warehoused'],
+ desc:'Ship products to Amazon warehouses — Amazon stores, packs, ships, and handles customer service for you.'},
+{id:'amazon_handmade',emoji:'✋',title:'Amazon Handmade',cat:'ecommerce',cost:'$0',color:C.gold,
+ tags:['Handmade','E-Commerce','Creative'],
+ desc:"Amazon's marketplace for artisan goods. Lower competition than Etsy with Amazon's enormous built-in traffic."},
+{id:'white_label',emoji:'🏷️',title:'White Label Products',cat:'ecommerce',cost:'$200–$1000',color:C.sienna,
+ tags:['Branding','Scalable','E-Commerce'],
+ desc:'Buy generic products from manufacturers, put your brand on them, sell at retail. Build a brand without a factory.'},
+{id:'private_label',emoji:'📋',title:'Private Label Products',cat:'ecommerce',cost:'$500–$1000',color:C.plum,
+ tags:['Branding','Advanced','E-Commerce'],
+ desc:'Work with manufacturers to produce custom-branded products exclusively for your label. Higher margins than white label.'},
+{id:'shopify_store',emoji:'🏪',title:'Shopify Store',cat:'ecommerce',cost:'$0–$300',color:C.rose,
+ tags:['E-Commerce','Remote','Scalable'],
+ desc:'Launch your own branded online store on Shopify. Sell physical or digital products directly to customers worldwide.'},
+{id:'wholesale_resell',emoji:'📫',title:'Buy Wholesale, Sell Retail',cat:'ecommerce',cost:'$200–$800',color:C.terracotta,
+ tags:['E-Commerce','Scalable','Physical'],
+ desc:'Source products at wholesale cost from suppliers and resell at full retail price on your own site, Etsy, or Amazon.'},
+
+// ─── RESELLING ───
+{id:'liquidation_buying',emoji:'🏬',title:'Direct Retail Liquidation Buying',cat:'reselling',cost:'$300–$1000',color:C.fig,
+ tags:['Wholesale','Advanced','High Margin'],
+ desc:"Buy overstock, returns, and end-of-season goods directly from major retailers like Macy's, Target, and more — then resell at profit."},
+{id:'poshmark',emoji:'👗',title:'Poshmark Reselling',cat:'reselling',cost:'$0–$50',color:C.coral,
+ tags:['Fashion','Remote','Beginner'],
+ desc:'Resell fashion, shoes, and accessories on Poshmark — one of the top clothing resale platforms in the US.'},
+{id:'mercari',emoji:'♻️',title:'Mercari Reselling',cat:'reselling',cost:'$0',color:C.rose,
+ tags:['Beginner','Remote','General'],
+ desc:'Sell almost anything on Mercari — clothes, toys, electronics, collectibles. Simple listing, quick sales.'},
+{id:'ebay_resell',emoji:'🏷️',title:'eBay Reselling',cat:'reselling',cost:'$0',color:C.coral,
+ tags:['Scalable','Remote','Vintage'],
+ desc:'The original resale marketplace. Best for electronics, collectibles, vintage, and liquidation finds.'},
+{id:'depop',emoji:'✨',title:'Depop Fashion Reselling',cat:'reselling',cost:'$0',color:C.deeprose,
+ tags:['Fashion','Vintage','Trending'],
+ desc:'Trendy fashion resale app popular with young buyers. Great for vintage, streetwear, and curated thrift finds.'},
+{id:'whatnot',emoji:'📡',title:'WhatNot Live Selling',cat:'reselling',cost:'$0',color:C.plum,
+ tags:['Live Video','Social','Collectibles'],
+ desc:'Sell items live via video auction. Hot for trading cards, vintage toys, fashion, and sports memorabilia.'},
+{id:'facebook_marketplace',emoji:'📍',title:'Facebook Marketplace',cat:'reselling',cost:'$0',color:C.warm,
+ tags:['Local','Free','Beginner'],
+ desc:'Sell locally or ship nationwide. One of the largest free selling platforms with zero listing fees.'},
+{id:'thrift_flipping',emoji:'🔄',title:'Thrift Store Flipping',cat:'reselling',cost:'$20–$100',color:C.sienna,
+ tags:['Reselling','Thrift','Beginner'],
+ desc:'Buy underpriced items at Goodwill, Salvation Army, and estate sales — then resell at 2x–10x on eBay or Poshmark.'},
+{id:'garage_sale_flip',emoji:'🏡',title:'Garage Sale Flipping',cat:'reselling',cost:'$20–$100',color:C.amber,
+ tags:['Local','Beginner','Low Cost'],
+ desc:'Scout garage sales and estate sales on weekends for underpriced valuables, then resell online for profit.'},
+{id:'sneaker_reselling',emoji:'👟',title:'Sneaker Reselling',cat:'reselling',cost:'$100–$500',color:C.deeprose,
+ tags:['Fashion','Niche','High Margin'],
+ desc:'Buy limited-edition sneakers at retail or below, resell at premium. GOAT, StockX, and eBay are the main platforms.'},
+{id:'book_reselling',emoji:'📗',title:'Book Reselling',cat:'reselling',cost:'$0–$50',color:C.sage,
+ tags:['Books','Low Cost','Beginner'],
+ desc:'Find underpriced textbooks and rare books at thrift stores or garage sales, resell on Amazon or AbeBooks.'},
+
+// ─── CREATIVE ───
+{id:'candle_making',emoji:'🕯️',title:'Candle Making',cat:'creative',cost:'$50–$200',color:C.amber,
+ tags:['Handmade','High Margin','E-Commerce'],
+ desc:'Create and sell handmade candles with 70–80% profit margins. Start in your kitchen for under $100.'},
+{id:'fashion_design',emoji:'👠',title:'Fashion Design & Sales',cat:'creative',cost:'$0–$500',color:C.coral,
+ tags:['Fashion','Design','Multi-Platform'],
+ desc:'Design clothing, accessories, or patterns and sell through print-on-demand, wholesale, or your own brand.'},
+{id:'shoe_design',emoji:'👟',title:'Custom Shoe Design',cat:'creative',cost:'$0–$300',color:C.plum,
+ tags:['Fashion','Niche','Custom'],
+ desc:'Design and sell custom shoes through POD platforms or hand-paint custom sneakers for $80–$500+ per pair.'},
+{id:'art_sales',emoji:'🖼️',title:'Original Art Sales',cat:'creative',cost:'$0–$100',color:C.dusty,
+ tags:['Art','Creative','Remote'],
+ desc:'Sell original paintings, drawings, and mixed media work online and at local markets and galleries.'},
+{id:'painting_techniques',emoji:'🎨',title:'Painting & Art Lessons',cat:'creative',cost:'$0',color:C.rose,
+ tags:['Teaching','Creative','Remote'],
+ desc:'Teach painting techniques on YouTube, Skillshare, or your own website. Build a course once, earn forever.'},
+{id:'public_domain_art',emoji:'🏛️',title:'Public Domain Art Selling',cat:'creative',cost:'$0',color:C.warm,
+ tags:['Zero Cost','Passive','Digital'],
+ desc:"Download masterworks by Monet, Van Gogh, Klimt — free, legal, commercial use. Sell as prints, POD products, or digital downloads."},
+{id:'digital_art',emoji:'💻',title:'Digital Art & Illustrations',cat:'creative',cost:'$0–$50',color:C.mauve,
+ tags:['Digital','Creative','Remote'],
+ desc:'Create and sell digital portraits, patterns, clipart, and illustrations for personal and commercial use.'},
+{id:'photography',emoji:'📸',title:'Stock Photography',cat:'creative',cost:'$0',color:C.sienna,
+ tags:['Passive','Photography','Remote'],
+ desc:'Sell photos on Shutterstock, Adobe Stock, and Getty Images. Each download earns a royalty.'},
+{id:'graphic_design',emoji:'🖌️',title:'Graphic Design',cat:'creative',cost:'$0',color:C.deeprose,
+ tags:['Design','Remote','Services'],
+ desc:'Design logos, branding, and marketing materials for businesses. Start with Canva, grow into Adobe tools.'},
+{id:'jewelry_making',emoji:'💎',title:'Jewelry Making',cat:'creative',cost:'$50–$300',color:C.gold,
+ tags:['Handmade','E-Commerce','Creative'],
+ desc:'Make and sell handcrafted jewelry on Etsy, at craft fairs, and through Instagram and TikTok.'},
+{id:'soap_making',emoji:'🧼',title:'Soap & Bath Products',cat:'creative',cost:'$50–$200',color:C.blush,
+ tags:['Handmade','E-Commerce','Creative'],
+ desc:'Create artisan soaps, bath bombs, and skincare with high margins. Sell on Etsy or at local markets.'},
+{id:'sublimation',emoji:'👕',title:'Sublimation Printing',cat:'creative',cost:'$200–$600',color:C.rose,
+ tags:['Physical','Custom','E-Commerce'],
+ desc:'Use a sublimation printer to create custom shirts, mugs, tumblers, and ornaments to sell locally or online.'},
+{id:'cricut_business',emoji:'✂️',title:'Cricut Crafts Business',cat:'creative',cost:'$200–$400',color:C.coral,
+ tags:['Handmade','E-Commerce','Custom'],
+ desc:'Use a Cricut machine to create custom shirts, decals, tumblers, and home décor — sell on Etsy or locally.'},
+{id:'sewing_alterations',emoji:'🪡',title:'Sewing & Alterations',cat:'creative',cost:'$0–$200',color:C.warm,
+ tags:['Local','Services','Creative'],
+ desc:'Offer clothing alterations, repairs, and custom sewing from home. High demand, minimal local competition.'},
+{id:'wedding_stationery',emoji:'💍',title:'Wedding Stationery',cat:'creative',cost:'$50–$200',color:C.dusty,
+ tags:['Creative','Seasonal','High Price'],
+ desc:'Design and sell wedding invitations, programs, and escort cards. Premium pricing with passionate buyers.'},
+{id:'3d_printing',emoji:'🖨️',title:'3D Printing Business',cat:'creative',cost:'$200–$600',color:C.sienna,
+ tags:['Tech','Creative','Physical'],
+ desc:'Print and sell 3D models, custom parts, figurines, and home décor. Sell digital files on Etsy too.'},
+
+// ─── DIGITAL PRODUCTS ───
+{id:'ebooks',emoji:'📚',title:'eBook Writing & Sales',cat:'digital',cost:'$0',color:C.deeprose,
+ tags:['Writing','Passive','Remote'],
+ desc:'Write and self-publish ebooks on Amazon KDP, Gumroad, or Etsy. Write once, earn passively for years.'},
+{id:'lulu_publishing',emoji:'📖',title:'Lulu.com Publishing',cat:'digital',cost:'$0',color:C.mauve,
+ tags:['Writing','Passive','Physical Books'],
+ desc:'Publish physical books, journals, planners, cookbooks, and photo books through Lulu — no upfront cost.'},
+{id:'kindle_publishing',emoji:'📱',title:'Amazon KDP Low-Content Books',cat:'digital',cost:'$0',color:C.gold,
+ tags:['Passive','Writing','Beginner'],
+ desc:'Self-publish journals, activity books, and planners on Amazon KDP. Design in Canva, upload, earn royalties.'},
+{id:'online_courses',emoji:'🎓',title:'Online Courses',cat:'digital',cost:'$0–$100',color:C.amber,
+ tags:['Teaching','Passive','Scalable'],
+ desc:'Package your knowledge into a course and sell on Teachable, Thinkific, or Kajabi. Sell it forever.'},
+{id:'printables',emoji:'🖨️',title:'Printables & Templates',cat:'digital',cost:'$0',color:C.plum,
+ tags:['Passive','Creative','Etsy'],
+ desc:'Design and sell printable planners, wall art, invitations, and spreadsheets on Etsy. Pure passive income.'},
+{id:'stock_music',emoji:'🎵',title:'Stock Music & Sound Effects',cat:'digital',cost:'$0',color:C.rose,
+ tags:['Music','Passive','Creative'],
+ desc:'Create and sell music loops, jingles, and sound effects on AudioJungle, Pond5, and Musicbed.'},
+{id:'svgs_clipart',emoji:'✂️',title:'SVG Files & Clipart',cat:'digital',cost:'$0',color:C.coral,
+ tags:['Passive','Creative','Craft'],
+ desc:'Sell SVG cut files for Cricut and Silhouette crafters. One of the highest-demand digital product categories on Etsy.'},
+{id:'notion_templates',emoji:'📋',title:'Notion & Canva Templates',cat:'digital',cost:'$0',color:C.fig,
+ tags:['Passive','Productivity','Creative'],
+ desc:'Design and sell Notion dashboards, Canva templates, or Google Sheets trackers to other creators and entrepreneurs.'},
+{id:'lightroom_presets',emoji:'🌄',title:'Lightroom Presets',cat:'digital',cost:'$0',color:C.mauve,
+ tags:['Photography','Passive','Creative'],
+ desc:'Create photo editing presets and sell on Etsy or your own site. Popular with content creators and photographers.'},
+{id:'plr_books',emoji:'📕',title:'PLR Content Reselling',cat:'digital',cost:'$0–$50',color:C.warm,
+ tags:['Passive','Writing','Low Cost'],
+ desc:'Buy Private Label Rights content — ebooks, courses, articles — rebrand it, and resell as your own products.'},
+{id:'app_development',emoji:'📲',title:'No-Code App Development',cat:'digital',cost:'$0–$50',color:C.sienna,
+ tags:['Tech','Scalable','Remote'],
+ desc:'Build mobile or web apps using Bubble, Glide, or Adalo — no coding required. Sell subscriptions or one-time access.'},
+{id:'chrome_extensions',emoji:'🔌',title:'Chrome Extensions',cat:'digital',cost:'$0',color:C.clay,
+ tags:['Tech','Passive','Dev'],
+ desc:'Build simple browser extensions and monetize with a one-time purchase or monthly subscription.'},
+{id:'stock_video',emoji:'🎥',title:'Stock Video Footage',cat:'digital',cost:'$0',color:C.rose,
+ tags:['Passive','Video','Creative'],
+ desc:'Upload video clips to Shutterstock, Pond5, or Adobe Stock. Every download earns a royalty payment.'},
+{id:'fonts_design',emoji:'🔤',title:'Font & Typography Design',cat:'digital',cost:'$0',color:C.dusty,
+ tags:['Design','Passive','Creative'],
+ desc:'Design and sell original typefaces on Creative Market, MyFonts, or Etsy. Passive royalties per download.'},
+
+// ─── WRITING ───
+{id:'freelance_writing',emoji:'✍️',title:'Freelance Writing',cat:'writing',cost:'$0',color:C.sage,
+ tags:['Remote','Beginner','Flexible'],
+ desc:'Write articles, blog posts, web copy, and content for businesses. Start on Upwork or pitch directly.'},
+{id:'steemit_writing',emoji:'🔗',title:'Get Paid to Write Online',cat:'writing',cost:'$0',color:C.warm,
+ tags:['Crypto','Revenue Share','Beginner'],
+ desc:'Write on Steemit, Medium, Vocal Media, Substack, and Listverse — platforms that pay you for your words.'},
+{id:'copywriting',emoji:'📝',title:'Copywriting',cat:'writing',cost:'$0',color:C.plum,
+ tags:['High-Paying','Remote','Marketing'],
+ desc:'Write persuasive ads, emails, and sales pages for businesses. The highest-paid writing niche online.'},
+{id:'ghostwriting',emoji:'👻',title:'Ghostwriting',cat:'writing',cost:'$0',color:C.fig,
+ tags:['Advanced','Remote','Lucrative'],
+ desc:'Write books, blogs, and scripts for clients who publish under their own name. $0.10–$1.00+ per word.'},
+{id:'resume_writing',emoji:'📄',title:'Resume & Cover Letter Writing',cat:'writing',cost:'$0',color:C.rose,
+ tags:['Services','Beginner','Remote'],
+ desc:'Help job seekers craft winning resumes. Charge $50–$300+ per resume from home with no certification needed.'},
+{id:'grant_writing',emoji:'🏆',title:'Grant Writing',cat:'writing',cost:'$0',color:C.warm,
+ tags:['Nonprofits','Advanced','High Pay'],
+ desc:'Write grant applications for nonprofits and small businesses. Earn $40–$120/hour as a skilled grant writer.'},
+{id:'blogging',emoji:'📰',title:'Blogging',cat:'writing',cost:'$0–$50',color:C.sage,
+ tags:['Passive','Content','Affiliate'],
+ desc:'Start a blog and monetize with display ads, affiliates, digital products, and brand sponsorships.'},
+{id:'newsletter',emoji:'📨',title:'Paid Newsletter / Substack',cat:'writing',cost:'$0',color:C.amber,
+ tags:['Passive','Subscription','Community'],
+ desc:'Build a paid newsletter. Readers pay monthly or annually. Keep 90%+ of all revenue.'},
+{id:'proofreading',emoji:'🔍',title:'Proofreading & Editing',cat:'writing',cost:'$0',color:C.mauve,
+ tags:['Remote','Services','Detail-Oriented'],
+ desc:'Proofread documents, books, websites, and academic papers for businesses and self-publishers.'},
+
+// ─── SERVICES ───
+{id:'virtual_assistant',emoji:'💼',title:'Virtual Assistant',cat:'services',cost:'$0',color:C.rose,
+ tags:['Remote','Beginner','Flexible'],
+ desc:'Provide admin, social media, email management, and scheduling support to business owners remotely.'},
+{id:'social_media_mgmt',emoji:'📱',title:'Social Media Management',cat:'services',cost:'$0',color:C.coral,
+ tags:['Remote','Creative','In Demand'],
+ desc:'Manage Instagram, TikTok, Pinterest, and Facebook accounts for small businesses and personal brands.'},
+{id:'bookkeeping',emoji:'📊',title:'Bookkeeping',cat:'services',cost:'$0–$200',color:C.sage,
+ tags:['Finance','Remote','Steady Income'],
+ desc:'Keep financial records for small businesses using QuickBooks or Wave. Steady demand and reliable pay.'},
+{id:'transcription',emoji:'🎙️',title:'Transcription Services',cat:'services',cost:'$0',color:C.warm,
+ tags:['Beginner','Remote','Flexible'],
+ desc:'Convert audio and video recordings into text. Flexible hours, no experience needed to start.'},
+{id:'data_entry',emoji:'⌨️',title:'Data Entry',cat:'services',cost:'$0',color:C.dusty,
+ tags:['Beginner','Remote','Entry Level'],
+ desc:'Enter and manage data for businesses. Widely available on Upwork and Fiverr, great for beginners.'},
+{id:'tutoring',emoji:'📐',title:'Online Tutoring',cat:'services',cost:'$0',color:C.mauve,
+ tags:['Teaching','Remote','Any Subject'],
+ desc:'Tutor students in any subject online via Tutor.com, Wyzant, or directly through your own scheduling.'},
+{id:'translation',emoji:'🌎',title:'Translation Services',cat:'services',cost:'$0',color:C.clay,
+ tags:['Language','Remote','Bilingual'],
+ desc:'Translate documents, websites, and content if bilingual. Earn $0.05–$0.25 per word.'},
+{id:'web_design',emoji:'🌐',title:'Web Design',cat:'services',cost:'$0',color:C.sienna,
+ tags:['Tech','Remote','Creative'],
+ desc:'Build websites for small businesses using Squarespace, WordPress, or Webflow. High demand market.'},
+{id:'video_editing',emoji:'🎬',title:'Video Editing',cat:'services',cost:'$0',color:C.deeprose,
+ tags:['Creative','Remote','High Demand'],
+ desc:'Edit videos for YouTubers, businesses, and content creators. Massive remote demand across all industries.'},
+{id:'podcast_editing',emoji:'🎧',title:'Podcast Editing',cat:'services',cost:'$0',color:C.plum,
+ tags:['Audio','Remote','Niche'],
+ desc:'Edit audio, write show notes, and manage RSS for podcast hosts. Growing niche with loyal repeat clients.'},
+{id:'credit_repair',emoji:'💳',title:'Credit Repair Consulting',cat:'services',cost:'$0–$200',color:C.fig,
+ tags:['Finance','Local/Remote','Legal Requirements'],
+ desc:'Help clients dispute inaccurate credit report items. Must comply with CROA and state licensing laws.'},
+{id:'notary',emoji:'⚖️',title:'Mobile Notary & Loan Signing',cat:'services',cost:'$50–$300',color:C.warm,
+ tags:['Local','Legal','Appointments'],
+ desc:'Certify as a notary public and notarize documents or sign loan packages for $75–$200 per appointment.'},
+{id:'tax_prep',emoji:'🧮',title:'Tax Preparation',cat:'services',cost:'$100–$500',color:C.sage,
+ tags:['Finance','Seasonal','Local/Remote'],
+ desc:'Start as an IRS VITA volunteer, then launch your own tax prep business. Earn $50–$150 per return.'},
+{id:'interior_decorating',emoji:'🛋️',title:'Virtual Interior Decorating',cat:'services',cost:'$0',color:C.dusty,
+ tags:['Creative','Remote','Consultations'],
+ desc:'Offer online interior design consultations and mood boards. Use free tools like Canva and Modsy.'},
+{id:'life_coaching',emoji:'🌟',title:'Life or Business Coaching',cat:'services',cost:'$0–$200',color:C.blush,
+ tags:['Remote','Teaching','High Ticket'],
+ desc:'Coach clients on mindset, productivity, or business growth. Sell packages at $500–$3,000+.'},
+{id:'airbnb_experiences',emoji:'🎭',title:'Airbnb Experiences',cat:'services',cost:'$0',color:C.coral,
+ tags:['Local','Creative','Tourism'],
+ desc:'Host paid local experiences through Airbnb — cooking classes, art workshops, city tours, and more.'},
+
+// ─── INVESTING (INFO ONLY) ───
+{id:'stocks_info',emoji:'📈',title:'Stock Market — Educational Overview',cat:'investments',cost:'Varies',color:C.sage,
+ tags:['Educational Only','No Advice Given'],
+ desc:'Learn how stocks, ETFs, and index funds work. Strictly informational — no investment advice is given here.'},
+{id:'crypto_info',emoji:'₿',title:'Crypto & Digital Assets — Educational',cat:'investments',cost:'Varies',color:C.sienna,
+ tags:['Educational Only','High Risk','No Advice'],
+ desc:'Understand cryptocurrency, staking, and DeFi concepts. Informational overview only — no advice given.'},
+{id:'real_estate_info',emoji:'🏠',title:'Real Estate Investing — Overview',cat:'investments',cost:'Varies',color:C.warm,
+ tags:['Educational Only','No Advice'],
+ desc:'Explore rental properties, house hacking, and real estate crowdfunding. Educational context only.'},
+{id:'reits_info',emoji:'🏢',title:'REITs — Educational Overview',cat:'investments',cost:'$10+',color:C.clay,
+ tags:['Educational Only','Passive','No Advice'],
+ desc:'Learn what Real Estate Investment Trusts are — own real estate exposure without being a landlord.'},
+
+// ─── PHYSICAL BUSINESS ───
+{id:'vending_machines',emoji:'🤖',title:'Traditional Vending Machines',cat:'physical',cost:'$1000–$5000',color:C.sage,
+ tags:['Passive','Cash Business','Scalable'],
+ desc:'Place snack, drink, or specialty machines in high-traffic locations for semi-passive monthly cash flow.'},
+{id:'smart_vending',emoji:'☕',title:'Smart & Tech Vending Machines',cat:'physical',cost:'$3000–$50K',color:C.clay,
+ tags:['Tech','Passive','2025 Trending'],
+ desc:'Robotic coffee kiosks, AI smart stores, beauty vending, and app-managed machines — the future of passive income.'},
+{id:'atm_business',emoji:'🏧',title:'ATM Business',cat:'physical',cost:'$2000–$5000',color:C.warm,
+ tags:['Passive','Cash','Scalable'],
+ desc:'Own and place ATMs in bars, convenience stores, and event venues. Earn $1–$3 per transaction passively.'},
+{id:'laundromat',emoji:'👕',title:'Laundromat Business',cat:'physical',cost:'$50K+',color:C.amber,
+ tags:['Passive','Recession-Proof','Cash'],
+ desc:'Semi-passive cash business. Buy an existing one for $50K+. Recession-proof, consistent, and scalable.'},
+{id:'baking',emoji:'🍰',title:'Home Bakery / Cottage Food',cat:'physical',cost:'$50–$300',color:C.amber,
+ tags:['Food','Local','Creative'],
+ desc:'Bake and sell from home under cottage food laws. Custom cakes, cookies, and specialty treats.'},
+{id:'meal_prep',emoji:'🍱',title:'Meal Prep Service',cat:'physical',cost:'$50–$200',color:C.sage,
+ tags:['Food','Local','Services'],
+ desc:'Cook and deliver weekly meal prep for busy professionals and families in your area.'},
+{id:'airbnb',emoji:'🏡',title:'Airbnb / Short-Term Rental',cat:'physical',cost:'$0–$1000',color:C.coral,
+ tags:['Real Estate','Passive','Flexible'],
+ desc:'Rent a spare room or your entire home on Airbnb. Earn $500–$5,000+/month depending on location.'},
+{id:'rent_storage',emoji:'📦',title:'Rent Out Storage Space',cat:'physical',cost:'$0',color:C.warm,
+ tags:['Passive','Zero Cost','Real Estate'],
+ desc:'Rent out your garage, driveway, or spare room on Neighbor.com. Pure passive income with no investment.'},
+{id:'rent_car',emoji:'🚙',title:'Rent Your Car — Turo',cat:'physical',cost:'$0',color:C.sienna,
+ tags:['Passive','Flexible','Gig'],
+ desc:'List your car on Turo or HyreCar when not in use. Earn $300–$1,500/month passively.'},
+{id:'cleaning_biz',emoji:'🧹',title:'Residential Cleaning Business',cat:'physical',cost:'$0–$200',color:C.dusty,
+ tags:['Local','Scalable','Services'],
+ desc:'Offer home cleaning services. Earn $25–$60/hour, build a team, scale into a full cleaning company.'},
+
+// ─── CONTENT & SOCIAL ───
+{id:'youtube',emoji:'▶️',title:'YouTube Channel',cat:'content',cost:'$0',color:C.deeprose,
+ tags:['Passive','Ads','Scalable'],
+ desc:'Create videos on any topic and earn through ad revenue, sponsorships, affiliate links, and memberships.'},
+{id:'tiktok',emoji:'🎵',title:'TikTok Creator',cat:'content',cost:'$0',color:C.fig,
+ tags:['Social','Beginner','Trending'],
+ desc:'Build a following on TikTok and earn through the Creator Fund, brand deals, and live gifting.'},
+{id:'instagram',emoji:'📷',title:'Instagram UGC & Influencer',cat:'content',cost:'$0',color:C.coral,
+ tags:['Social','Creative','Brand Deals'],
+ desc:'Earn through brand partnerships and UGC (user-generated content) deals — no huge following required.'},
+{id:'pinterest',emoji:'📌',title:'Pinterest Affiliate Marketing',cat:'content',cost:'$0',color:C.deeprose,
+ tags:['Passive','Affiliate','Visual'],
+ desc:'Pin affiliate products and earn commissions. Pinterest traffic compounds over time — set it and earn.'},
+{id:'affiliate_marketing',emoji:'🔗',title:'Affiliate Marketing',cat:'content',cost:'$0',color:C.sage,
+ tags:['Passive','Remote','Scalable'],
+ desc:'Recommend products via a unique link and earn commission on every sale. Works across every platform.'},
+{id:'amazon_associates',emoji:'🛒',title:'Amazon Associates Program',cat:'content',cost:'$0',color:C.gold,
+ tags:['Passive','Beginner','Affiliate'],
+ desc:'Promote Amazon products and earn 1–10% commission. Works with a blog, YouTube, or social media.'},
+{id:'podcast',emoji:'🎙️',title:'Podcast Monetization',cat:'content',cost:'$0–$100',color:C.warm,
+ tags:['Audio','Sponsorships','Community'],
+ desc:'Start a podcast and monetize through sponsorships, listener support, and premium episode subscriptions.'},
+{id:'twitch',emoji:'🎮',title:'Twitch Streaming',cat:'content',cost:'$0',color:C.plum,
+ tags:['Gaming','Live','Community'],
+ desc:'Stream games, art, music, or just chatting on Twitch. Earn through subscriptions, bits, and sponsorships.'},
+
+// ─── GIG WORK ───
+{id:'rideshare',emoji:'🚕',title:'Rideshare & Delivery',cat:'gig',cost:'$0',color:C.amber,
+ tags:['Flexible','Same-Day Pay','Beginner'],
+ desc:'Drive for Uber/Lyft or deliver for DoorDash, Instacart, and Amazon Flex on your own schedule.'},
+{id:'task_rabbit',emoji:'🔨',title:'TaskRabbit',cat:'gig',cost:'$25 reg.',color:C.sienna,
+ tags:['Local','Handyman','Services'],
+ desc:'Complete local tasks — furniture assembly, cleaning, moving help — for neighbors and businesses.'},
+{id:'pet_sitting',emoji:'🐾',title:'Pet Sitting & Dog Walking',cat:'gig',cost:'$0',color:C.warm,
+ tags:['Local','Animal Lovers','Flexible'],
+ desc:'Walk dogs, pet sit, or board animals through Rover.com. Flexible hours, enjoyable work.'},
+{id:'childcare',emoji:'👶',title:'Childcare & Babysitting',cat:'gig',cost:'$0',color:C.blush,
+ tags:['Local','Services','Flexible'],
+ desc:'Offer babysitting or home daycare through Care.com or Sittercity. High demand, flexible scheduling.'},
+{id:'online_surveys',emoji:'📋',title:'Online Surveys & User Testing',cat:'gig',cost:'$0',color:C.dusty,
+ tags:['Beginner','Part-Time','Extra Cash'],
+ desc:'Earn gift cards and cash taking surveys on Swagbucks, Survey Junkie, and testing sites on UserTesting.'},
+{id:'microtasking',emoji:'⚡',title:'Microtasking (MTurk / Clickworker)',cat:'gig',cost:'$0',color:C.rose,
+ tags:['Beginner','Remote','Flexible'],
+ desc:'Complete small online tasks for pay on Amazon Mechanical Turk, Clickworker, or Appen.'},
+
+// ─── NEW TOPICS ───
+{id:'retail_placement',emoji:'🏪',title:'Get Products Into Retail Stores',cat:'ecommerce',cost:'$0–$200',color:C.sage,
+ tags:['Physical Product','Wholesale','Retail'],
+ desc:'Land your product on retail shelves at Target, Walmart, boutiques, and more using free pitch platforms like RangeMe and direct outreach strategies.'},
+{id:'shein_marketplace',emoji:'👗',title:'Sell on SHEIN Marketplace',cat:'ecommerce',cost:'$0',color:C.coral,
+ tags:['E-Commerce','Fashion','Global'],
+ desc:"List and sell clothing, accessories, and lifestyle products to SHEIN's 150+ million global shoppers. Free to join with no upfront fees."},
+{id:'product_manufacturing',emoji:'🏭',title:'Get Products Manufactured',cat:'ecommerce',cost:'$200–$2000',color:C.clay,
+ tags:['Physical Product','Private Label','Sourcing'],
+ desc:"Find U.S. and overseas manufacturers for your product idea using platforms like Maker's Row, Alibaba, and more — from prototype to production."},
+{id:'notary_detail',emoji:'⚖️',title:'Notary & Loan Signing Agent (California)',cat:'services',cost:'$50–$300',color:C.mauve,
+ tags:['Local','Legal','California'],
+ desc:'Become a commissioned notary public in California and earn $75–$200 per signing appointment. Step-by-step California-specific guide.'},
+{id:'advocate_assistant',emoji:'🤝',title:'Patient / Disability Advocate Assistant',cat:'services',cost:'$0–$100',color:C.warm,
+ tags:['Healthcare','Remote/Local','Services'],
+ desc:'Help patients navigate insurance denials, medical bills, disability claims, and healthcare systems. High-demand growing field.'},
+{id:'ca_cottage_food',emoji:'🍰',title:'California Cottage Food Business',cat:'physical',cost:'$50–$300',color:C.amber,
+ tags:['Food','California','Home-Based'],
+ desc:"Sell food made in your home kitchen under California's Cottage Food Law — no commercial kitchen needed for approved products."},
+];
+
+// ─── DETAIL PAGES ───
+const details = {
+
+dropshipping:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">📦</span>
+  <span class="detail-badge">E-Commerce · No Inventory</span>
+  <h1 class="detail-title">Dropshipping</h1>
+  <p class="detail-desc">Dropshipping lets you sell products online without ever touching inventory. You create a store, market products, and when a customer buys, your supplier ships directly to them. You keep the margin between your price and the supplier's cost. It requires real marketing effort to succeed, but the overhead is near zero to start.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$0–$100</div></div>
+    <div class="meta-item"><div class="meta-label">Time to First Sale</div><div class="meta-value">1–4 weeks</div></div>
+    <div class="meta-item"><div class="meta-label">Income Potential</div><div class="meta-value">$500–$10,000+/mo</div></div>
+    <div class="meta-item"><div class="meta-label">Difficulty</div><div class="meta-value">Beginner–Moderate</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">📖 How It Works — Step by Step</div>
+  <div class="steps-list">
+    <div class="step-item"><div class="step-num">1</div><div class="step-text">Choose a focused niche — baby products, pet gear, home organization, fitness equipment.</div></div>
+    <div class="step-item"><div class="step-num">2</div><div class="step-text">Create a store on Shopify (free trial) or WooCommerce on WordPress (free plugin).</div></div>
+    <div class="step-item"><div class="step-num">3</div><div class="step-text">Find suppliers on AliExpress, Spocket (US-based), or CJDropshipping. Import products with one click using DSers.</div></div>
+    <div class="step-item"><div class="step-num">4</div><div class="step-text">Market through TikTok organic content, Pinterest, or paid Facebook/Instagram ads.</div></div>
+    <div class="step-item"><div class="step-num">5</div><div class="step-text">Orders come in, supplier ships automatically. You manage customer service and scale what works.</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 Free Resources & Platforms</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">Free Trial</span><div class="resource-name">Shopify — Build Your Store</div><div class="resource-desc">Most beginner-friendly e-commerce platform. Free 3-day trial, then $1/month for 3 months for new users.</div><a class="resource-link" href="https://www.shopify.com" target="_blank">→ shopify.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free</span><div class="resource-name">DSers — AliExpress Dropshipping App</div><div class="resource-desc">Official AliExpress dropshipping partner. Import products, manage and auto-fulfill orders with one click. Free plan available.</div><a class="resource-link" href="https://www.dsers.com" target="_blank">→ dsers.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Plan</span><div class="resource-name">Spocket — US & EU Suppliers</div><div class="resource-desc">Find US and European suppliers for 2–7 day shipping. Free plan available to browse and add products.</div><a class="resource-link" href="https://www.spocket.co" target="_blank">→ spocket.co</a></div>
+    <div class="resource-card"><span class="resource-type type-research">Free Research</span><div class="resource-name">Google Trends — Validate Your Niche</div><div class="resource-desc">Research product and niche demand before you invest time. Compare trends, seasonality, and regional interest.</div><a class="resource-link" href="https://trends.google.com" target="_blank">→ trends.google.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Education</span><div class="resource-name">YouTube — Dropshipping Tutorials 2025</div><div class="resource-desc">Search "dropshipping 2025 beginner" — channels like AutoDS and Wholesale Ted offer free full-length tutorials.</div><a class="resource-link" href="https://www.youtube.com/results?search_query=dropshipping+2025+beginner" target="_blank">→ YouTube Tutorials</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 Pro Tip</div><p>Start with domestic suppliers (Spocket, CJDropshipping US warehouse) to avoid long overseas shipping times. Long delivery windows are the #1 reason customers request refunds and leave negative reviews. Faster shipping = better reviews = more sales.</p></div>
+<div class="warn-box"><div class="warn-box-title">⚠️ Watch Out</div><p>Never make false income claims or promise specific results in your marketing — that creates legal liability under FTC guidelines. Vet suppliers with sample orders before listing their products publicly.</p></div>`,
+
+liquidation_buying:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">🏬</span>
+  <span class="detail-badge">Reselling · Wholesale · Direct Retail</span>
+  <h1 class="detail-title">Direct Retail Liquidation Buying</h1>
+  <p class="detail-desc">Major retailers — Macy's, Target, Walmart, Nordstrom, Sephora — sell overstock, customer returns, shelf-pulls, and end-of-season merchandise in bulk at deeply discounted prices. This guide walks through the legitimate process of buying directly from retailers or their official liquidation channels, without middlemen. You then resell on Poshmark, eBay, Mercari, WhatNot, your own store, or at local markets.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$300–$1,000</div></div>
+    <div class="meta-item"><div class="meta-label">Required</div><div class="meta-value">Resale Tax ID (free)</div></div>
+    <div class="meta-item"><div class="meta-label">Profit Potential</div><div class="meta-value">200–800% markup</div></div>
+    <div class="meta-item"><div class="meta-label">Difficulty</div><div class="meta-value">Intermediate</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">📖 The Exact Process</div>
+  <div class="steps-list">
+    <div class="step-item"><div class="step-num">1</div><div class="step-text"><strong>Get a Resale Certificate / Sales Tax ID:</strong> Apply free through your state's Department of Revenue. This is legally required to buy wholesale. Search "[your state] resale certificate application."</div></div>
+    <div class="step-item"><div class="step-num">2</div><div class="step-text"><strong>Register with Macy's official liquidation portal:</strong> Macy's operates a direct buyer registration at macysliquidation.com. Register with your business name and resale ID. Approval takes 5–7 business days.</div></div>
+    <div class="step-item"><div class="step-num">3</div><div class="step-text"><strong>Use B2B liquidation auction platforms:</strong> B-Stock Solutions manages official liquidation programs for Target, Walmart, Best Buy, Sam's Club, and Home Depot. Register, verify your business, bid on pallets and truckloads at auction.</div></div>
+    <div class="step-item"><div class="step-num">4</div><div class="step-text"><strong>Contact brands directly — the right way:</strong> Don't email the CEO. Find the <strong>Director of Vendor Relations</strong>, <strong>Head of Reverse Logistics</strong>, or <strong>Wholesale/Overstock Manager</strong> on LinkedIn. Write a one-page professional proposal requesting to purchase overstock, discontinued, returned, or end-of-season merchandise. State your resale license and that you can arrange freight pickup.</div></div>
+    <div class="step-item"><div class="step-num">5</div><div class="step-text"><strong>Sign an NDA if required:</strong> Many brands require a Non-Disclosure Agreement so you don't publicly reveal your sourcing. This is standard, legal, and actually protects your competitive advantage.</div></div>
+    <div class="step-item"><div class="step-num">6</div><div class="step-text"><strong>Arrange freight:</strong> When buying direct, you typically arrange shipping from their warehouse. Get quotes at uShip.com or FreightQuote.com. Build freight cost into your buy price calculation.</div></div>
+    <div class="step-item"><div class="step-num">7</div><div class="step-text"><strong>Resell across multiple channels:</strong> Poshmark, eBay, Mercari, WhatNot live auctions, Facebook Marketplace, Shopify store, local flea markets, pop-up shops, or wholesale to other boutiques.</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 Official Direct Sources & Platforms</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-platform">Direct — Macy's</span><div class="resource-name">Macy's Official Liquidation Program</div><div class="resource-desc">Macy's official buyer portal for overstock, jobouts, and customer returns. Register with your resale tax ID. Contact: liquidationsales@macys.com</div><a class="resource-link" href="https://www.macysliquidation.com" target="_blank">→ macysliquidation.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">B2B Auction</span><div class="resource-name">B-Stock Solutions — Official Retailer Auctions</div><div class="resource-desc">Official liquidation marketplace for Target, Walmart, Best Buy, Sam's Club, Home Depot, and many more. Bid on pallets and truckloads direct from the retailer.</div><a class="resource-link" href="https://bstock.com" target="_blank">→ bstock.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Marketplace</span><div class="resource-name">Liquidation.com — Multi-Retailer Lots</div><div class="resource-desc">Nordstrom Rack, Walmart, Amazon and more. Browse by category, condition grade, and lot size. Good for starting small.</div><a class="resource-link" href="https://www.liquidation.com" target="_blank">→ liquidation.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Marketplace</span><div class="resource-name">Direct Liquidation — Nordstrom, Walmart & More</div><div class="resource-desc">Major marketplace for retailer overstock. Lists Nordstrom, Walmart, and major brand lots regularly.</div><a class="resource-link" href="https://www.directliquidation.com" target="_blank">→ directliquidation.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Marketplace</span><div class="resource-name">Via Trading — Apparel & Beauty Liquidation</div><div class="resource-desc">US-based liquidator in Los Angeles. Specializes in apparel, cosmetics, and general merchandise from major chains. Walk-in buyers welcome.</div><a class="resource-link" href="https://www.viatrading.com" target="_blank">→ viatrading.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Luxury Brands</span><div class="resource-name">888 Lots — Nordstrom & Luxury Inventory</div><div class="resource-desc">Specializes in Nordstrom and luxury brand liquidation lots. High-end inventory for premium resellers.</div><a class="resource-link" href="https://www.888lots.com" target="_blank">→ 888lots.com</a></div>
+    <div class="resource-card"><span class="resource-type type-legal">Required — Free</span><div class="resource-name">Resale Certificate — By State (SBA Guide)</div><div class="resource-desc">Every state has its own process. This is legally required to buy wholesale. Apply free through your state's revenue department.</div><a class="resource-link" href="https://www.sba.gov/business-guide/launch-your-business/apply-licenses-permits" target="_blank">→ SBA Licenses Guide</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 Reaching Brands Directly</div><p>The right contact is never the CEO — they'll pass you off. Instead target the <strong>Director of Vendor Relations</strong>, <strong>Reverse Logistics Manager</strong>, or <strong>Head of Wholesale</strong>. Use LinkedIn to find the exact person at brands like Calvin Klein, Ralph Lauren, or Sephora. Your one-page proposal should state: (1) you are a licensed reseller, (2) you are interested in purchasing overstock/returned/discontinued/end-of-season merchandise, (3) you can arrange your own freight, and (4) you are prepared to sign an NDA. Start small — ask to buy one pallet before committing to a container.</p></div>
+<div class="warn-box"><div class="warn-box-title">⚠️ Scam Warning</div><p>Many fake "liquidation pallet" sellers operate on social media. Stick exclusively to the verified B2B platforms listed above. Never wire money to individuals. Always start with one small order before scaling up. Check every platform's seller reviews carefully before bidding.</p></div>`,
+
+smart_vending:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">☕</span>
+  <span class="detail-badge">Tech · Physical Business · Passive</span>
+  <h1 class="detail-title">Smart & Tech-Forward Vending Machines</h1>
+  <p class="detail-desc">The vending machine industry has been transformed by technology. Today's smart machines are AI-powered, app-managed, and can brew barista-quality coffee, dispense fresh meals, sell electronics, and operate as fully automated mini convenience stores — all managed remotely from your phone. This is one of the most exciting passive income opportunities of 2025 with machines available at multiple price points.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$3,000–$50,000+</div></div>
+    <div class="meta-item"><div class="meta-label">Management</div><div class="meta-value">Smartphone App</div></div>
+    <div class="meta-item"><div class="meta-label">Net Per Machine</div><div class="meta-value">$500–$10,000+/mo</div></div>
+    <div class="meta-item"><div class="meta-label">Hours Needed</div><div class="meta-value">2–5 hrs/week</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🤖 Types of Smart Vending Machines — Sign Up & Buy</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-platform">Robotic Coffee</span><div class="resource-name">Rozum Café — Robot Coffee Bar Franchise</div><div class="resource-desc">A robotic arm brews premium espresso drinks 24/7 with zero staff. Franchise partner program lets you build a chain of robot cafés. Fully app-managed inventory and sales tracking.</div><a class="resource-link" href="https://rozum.com/cafe" target="_blank">→ rozum.com/cafe — Partner Program</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Smart Coffee Kiosk</span><div class="resource-name">VendingLab — Smart Coffee & Vending Solutions</div><div class="resource-desc">Turnkey smart coffee kiosks serving 60+ hot and cold beverages. No staff, 24/7 operation. Contactless payment, remote management app, custom branding. Multiple purchase and franchise options.</div><a class="resource-link" href="https://vendinglab.tech" target="_blank">→ vendinglab.tech — Get Started</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">AI Smart Store</span><div class="resource-name">VenHub — AI-Powered Automated Smart Store</div><div class="resource-desc">Not just a vending machine — a fully autonomous AI store. Stock hundreds of products, real-time inventory tracking, dynamic pricing, 24/7 security sensors, mobile checkout. No staff or lease required. Sign up as an operator on their site.</div><a class="resource-link" href="https://www.venhub.com" target="_blank">→ venhub.com — Become an Operator</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Healthy Snacks</span><div class="resource-name">Naturals2Go — Healthy Vending Franchise</div><div class="resource-desc">Home-based vending franchise with remote AI monitoring and management. Specializes in healthy snacks and drinks in schools, gyms, and offices. Full training and corporate support. Buy 1 to 10+ machines.</div><a class="resource-link" href="https://naturals2go.com" target="_blank">→ naturals2go.com — Start Here</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Fresh Food</span><div class="resource-name">Farmer's Fridge — Fresh Salad & Meal Vending</div><div class="resource-desc">Fresh meal vending kiosks placed in hospitals, airports, and offices. Franchise and operator partner programs available. Growing rapidly nationwide.</div><a class="resource-link" href="https://www.farmersfridge.com/partnerships" target="_blank">→ farmersfridge.com/partnerships</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Beauty Products</span><div class="resource-name">Beauty & Cosmetics Vending — Acquire Retail</div><div class="resource-desc">Automated beauty and electronics retail kiosks placed in airports and hotels. Contact their operator program to place units in premium locations.</div><a class="resource-link" href="https://www.acquireretail.com" target="_blank">→ acquireretail.com — Partner Program</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Specialty / CBD</span><div class="resource-name">American Vending Machines — Specialty Units</div><div class="resource-desc">Buy new and used specialty vending machines including fresh food, electronics, PPE, and custom product vending. Wide range of price points from $3,000+.</div><a class="resource-link" href="https://www.americanvendingmachines.com" target="_blank">→ americanvendingmachines.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Industry Research</span><div class="resource-name">Vending Connection — Free Industry Publication</div><div class="resource-desc">Free trade publication covering all vending machine types, new tech, industry news, ROI guides, and business models.</div><a class="resource-link" href="https://www.vendingconnection.com" target="_blank">→ vendingconnection.com</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 Best Locations for Smart Vending</div><p>Airports, university campuses, hospital lobbies, office buildings (50+ employees), transit stations, gyms, hotels, and car dealership waiting rooms. For robotic coffee specifically: look for places where people wait 5–15 minutes regularly. Approach property owners with a revenue-share arrangement — offer 10–20% of monthly machine revenue in exchange for placement rights. Get location agreements in writing.</p></div>
+<div class="warn-box"><div class="warn-box-title">⚠️ Before You Invest</div><p>Always request a detailed ROI projection and speak to existing operators before committing. Verify every company's business registration and read reviews from current franchisees. Never wire large sums without a signed, reviewed contract. Location selection determines nearly everything — do foot traffic counts before placing any machine.</p></div>`,
+
+white_label:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">🏷️</span>
+  <span class="detail-badge">E-Commerce · Branding · Scalable</span>
+  <h1 class="detail-title">White Label Products</h1>
+  <p class="detail-desc">White labeling means buying generic manufacturer products, putting your own brand label on them, and selling at retail price. The manufacturer does all the production work — you build the brand, control pricing, and keep the margin. It's how thousands of six-figure Amazon and Etsy sellers built their businesses without inventing a single product.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$200–$1,000</div></div>
+    <div class="meta-item"><div class="meta-label">Profit Margin</div><div class="meta-value">40–70%</div></div>
+    <div class="meta-item"><div class="meta-label">Best Niches</div><div class="meta-value">Beauty, Supplements, Cleaning, Pet</div></div>
+    <div class="meta-item"><div class="meta-label">Difficulty</div><div class="meta-value">Intermediate</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 White Label Supplier Sources</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">Free to Browse</span><div class="resource-name">Alibaba — Global White Label Manufacturers</div><div class="resource-desc">World's largest B2B marketplace. Filter by "customizable" or "OEM/ODM." Request samples before bulk orders. Free to browse and contact suppliers.</div><a class="resource-link" href="https://www.alibaba.com" target="_blank">→ alibaba.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free</span><div class="resource-name">Faire — US Wholesale Marketplace</div><div class="resource-desc">US-based wholesale marketplace with Net 60 payment terms. Great for boutique, home goods, and beauty white label products.</div><a class="resource-link" href="https://www.faire.com" target="_blank">→ faire.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Beauty / Skincare</span><div class="resource-name">Private Label Extensions — Beauty Products</div><div class="resource-desc">White label hair care, skincare, and beauty products with your branding already applied. Fast turnaround, low minimums.</div><a class="resource-link" href="https://www.privatelabelextensions.com" target="_blank">→ privatelabelextensions.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Supplements</span><div class="resource-name">Supliful — White Label Vitamins & Supplements</div><div class="resource-desc">Print-on-demand supplement pouches with your brand. No minimum orders. Integrates directly with Shopify and WooCommerce.</div><a class="resource-link" href="https://supliful.com" target="_blank">→ supliful.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Cleaning Products</span><div class="resource-name">Wholesale Supplies Plus — Private Label Cleaning</div><div class="resource-desc">White label cleaning products, personal care, and home goods. US manufacturer with low minimums and custom labeling services.</div><a class="resource-link" href="https://www.wholesalesuppliesplus.com" target="_blank">→ wholesalesuppliesplus.com</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 Best White Label Niches Right Now</div><p>Skincare and beauty, vitamins and supplements, natural cleaning products, pet accessories, candles, and personal care. Pick a niche you understand deeply — your authentic knowledge of the product becomes your best marketing. Order samples from 3–5 suppliers before choosing one. Build your brand story before you build your store.</p></div>`,
+
+candle_making:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">🕯️</span>
+  <span class="detail-badge">Handmade · Creative · High Margin</span>
+  <h1 class="detail-title">Candle Making Business</h1>
+  <p class="detail-desc">Candle making is one of the most profitable handmade businesses available. Materials cost $2–$5 per candle while retail prices run $18–$45 — giving you margins of 70–80%. Customers buy candles repeatedly, making them perfect for building a loyal subscriber base. You can start in your kitchen for under $100 this week.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$50–$200</div></div>
+    <div class="meta-item"><div class="meta-label">Profit Margin</div><div class="meta-value">70–80%</div></div>
+    <div class="meta-item"><div class="meta-label">Income Potential</div><div class="meta-value">$500–$8,000+/mo</div></div>
+    <div class="meta-item"><div class="meta-label">Difficulty</div><div class="meta-value">Beginner</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">📖 How to Start</div>
+  <div class="steps-list">
+    <div class="step-item"><div class="step-num">1</div><div class="step-text">Buy a starter kit from CandleScience.com ($40–$80). Includes soy wax, wicks, fragrance oils, and containers — everything to make your first 20 candles.</div></div>
+    <div class="step-item"><div class="step-num">2</div><div class="step-text">Learn wick sizing, fragrance load percentages (6–10% of wax weight), and cure times (48–72 hours). Make 10–20 test candles before selling.</div></div>
+    <div class="step-item"><div class="step-num">3</div><div class="step-text">Choose a niche: luxury soy candles, funny label candles, seasonal/holiday scents, botanical, or wellness/meditation. Niche = easier marketing.</div></div>
+    <div class="step-item"><div class="step-num">4</div><div class="step-text">Design labels in Canva (free). Order custom labels from StickerMule or StickerYou ($30–$50 for 100 labels).</div></div>
+    <div class="step-item"><div class="step-num">5</div><div class="step-text">Sell on Etsy, at farmers markets, through Instagram, or pitch wholesale to local boutiques, spas, and gift shops.</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 Resources & Suppliers</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">Free Education</span><div class="resource-name">CandleScience — Free Candle Making Tutorials</div><div class="resource-desc">The best free online resource for candle making. Wick guides, fragrance calculators, pour temperature charts, and troubleshooting. Also sells supplies at competitive prices.</div><a class="resource-link" href="https://www.candlescience.com/learning" target="_blank">→ candlescience.com/learning</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Supplier</span><div class="resource-name">Brambleberry — Candle & Soap Supplies</div><div class="resource-desc">High-quality fragrance oils, soy wax, and containers for natural and premium candle makers. Detailed tutorials included.</div><a class="resource-link" href="https://www.brambleberry.com" target="_blank">→ brambleberry.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Sell Here</span><div class="resource-name">Etsy — Open Your Candle Shop Free</div><div class="resource-desc">The #1 marketplace for handmade candles. $0.20 per listing. Millions of candle buyers search Etsy daily. Start listing immediately.</div><a class="resource-link" href="https://www.etsy.com/sell" target="_blank">→ etsy.com/sell</a></div>
+    <div class="resource-card"><span class="resource-type type-legal">Legal</span><div class="resource-name">ASTM Candle Safety Standards</div><div class="resource-desc">Candles sold commercially should comply with ASTM F2108 standards covering labeling, wick centering, and flash point requirements. Review before selling.</div><a class="resource-link" href="https://www.astm.org" target="_blank">→ astm.org</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 Wholesale Strategy</div><p>Once your candle formula is perfected, approach local boutiques, spas, yoga studios, and gift shops with a wholesale sheet. Offer a minimum order of 12–24 candles at 50% of your retail price. Wholesale creates steady bulk orders without the individual e-commerce customer service work. One boutique account can equal 50+ Etsy sales per month.</p></div>`,
+
+lulu_publishing:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">📖</span>
+  <span class="detail-badge">Publishing · Digital · Physical Books</span>
+  <h1 class="detail-title">Lulu.com Publishing</h1>
+  <p class="detail-desc">Lulu.com is a free print-on-demand publishing platform that lets you create and sell professional books, journals, planners, cookbooks, photo books, and calendars — at zero upfront cost. When someone orders, Lulu prints and ships it. You earn royalties. You can also buy copies at cost to sell directly at your own margin.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$0</div></div>
+    <div class="meta-item"><div class="meta-label">What You Create</div><div class="meta-value">Books, Journals, Planners, Cookbooks</div></div>
+    <div class="meta-item"><div class="meta-label">Income Type</div><div class="meta-value">Passive Royalties</div></div>
+    <div class="meta-item"><div class="meta-label">Difficulty</div><div class="meta-value">Beginner</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">📚 What You Can Create & Sell on Lulu</div>
+  <div class="steps-list">
+    <div class="step-item"><div class="step-num">1</div><div class="step-text"><strong>Journals & Planners:</strong> Daily planners, gratitude journals, meal planning books, prayer journals, budget trackers. Design the interior in Canva, upload as PDF.</div></div>
+    <div class="step-item"><div class="step-num">2</div><div class="step-text"><strong>Cookbooks:</strong> Themed recipe collections — slow cooker meals, 30-minute dinners, budget cooking, international cuisine, diet-specific recipes.</div></div>
+    <div class="step-item"><div class="step-num">3</div><div class="step-text"><strong>Children's Books:</strong> Illustrated stories, educational workbooks, activity books, alphabet books, bedtime readers.</div></div>
+    <div class="step-item"><div class="step-num">4</div><div class="step-text"><strong>Activity & Coloring Books:</strong> Coloring books for any niche, puzzle books, word searches, sudoku collections, and seasonal activity books.</div></div>
+    <div class="step-item"><div class="step-num">5</div><div class="step-text"><strong>Photo Books & Calendars:</strong> Custom photo books, wall calendars, niche photography books — landscape, portraits, travel, pets.</div></div>
+    <div class="step-item"><div class="step-num">6</div><div class="step-text"><strong>How-To & Instructional Guides:</strong> Step-by-step guides on any skill you have — crafting, cooking, home repair, business, fitness.</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 Resources & Tools</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">Free Platform</span><div class="resource-name">Lulu.com — Create & Sell Free</div><div class="resource-desc">Create your account, upload your PDF interior and cover, set your price and royalty, and start selling globally. Free distribution to 40,000+ retailers.</div><a class="resource-link" href="https://www.lulu.com" target="_blank">→ lulu.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Templates</span><div class="resource-name">Lulu Book Interior Templates</div><div class="resource-desc">Free downloadable Word and InDesign templates for every book format and size. No design experience needed.</div><a class="resource-link" href="https://www.lulu.com/create/books" target="_blank">→ lulu.com/create/books</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Design</span><div class="resource-name">Canva — Design Book Covers & Interiors</div><div class="resource-desc">Use Canva's free book cover templates and interior page layouts to design professional-looking publications in hours.</div><a class="resource-link" href="https://www.canva.com/create/book-covers" target="_blank">→ canva.com — Book Covers</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Also Sell Here</span><div class="resource-name">Amazon KDP — Pair with Lulu</div><div class="resource-desc">Use Amazon KDP for Amazon distribution and Lulu for everything else — personal website, direct sales, and retail distribution.</div><a class="resource-link" href="https://kdp.amazon.com" target="_blank">→ kdp.amazon.com</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 The Low-Content Book Strategy</div><p>Low-content books (lined journals, planners, coloring books, notebooks) require minimal writing. Design a 100-page gratitude journal in Canva in 2–3 hours, upload to both Lulu and Amazon KDP, and earn $3–$8 per sale passively. Target a specific niche: fitness trackers, homeschool planners, real estate investor notebooks, recipe journals. Niche books outsell generic ones every time.</p></div>`,
+
+fashion_design:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">👠</span>
+  <span class="detail-badge">Creative · Fashion · Multi-Platform</span>
+  <h1 class="detail-title">Fashion Design & Sales</h1>
+  <p class="detail-desc">You don't need a fashion degree or a factory to sell fashion designs in 2025. Modern tools let you create original designs, sell them as digital pattern files, have them printed on demand, submit them to fabric marketplaces, or produce small manufacturing runs. Here's the complete roadmap from first sketch to first sale.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$0–$500</div></div>
+    <div class="meta-item"><div class="meta-label">Key Tools</div><div class="meta-value">Canva, Procreate, or Adobe Illustrator</div></div>
+    <div class="meta-item"><div class="meta-label">Income Potential</div><div class="meta-value">$500–$20,000+/mo</div></div>
+    <div class="meta-item"><div class="meta-label">Difficulty</div><div class="meta-value">Beginner–Advanced</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🎨 Where to Learn Fashion Design — Free</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">Free (Audit)</span><div class="resource-name">Coursera — Fashion Design from Top Universities</div><div class="resource-desc">Audit fashion design courses from Parsons and FIT for free. The certificate costs money — the education doesn't.</div><a class="resource-link" href="https://www.coursera.org/search?query=fashion+design" target="_blank">→ coursera.org — Fashion Design</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free</span><div class="resource-name">YouTube — Fashion Flat Sketching Tutorials</div><div class="resource-desc">Learn fashion illustration and flat sketching for free. Search "fashion croquis tutorial" or "Adobe Illustrator fashion flats beginner."</div><a class="resource-link" href="https://www.youtube.com/results?search_query=fashion+flat+sketching+tutorial+beginner" target="_blank">→ YouTube — Fashion Sketching</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free</span><div class="resource-name">Canva — Create Fashion Print Designs</div><div class="resource-desc">Design surface patterns, print graphics, and clothing artwork using Canva's free design tools. No experience needed.</div><a class="resource-link" href="https://www.canva.com" target="_blank">→ canva.com</a></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🛍️ Where to Sell Fashion Designs</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-platform">Print-on-Demand</span><div class="resource-name">Printify — Sell on Clothing, Hoodies & More</div><div class="resource-desc">Upload your design, sell through Etsy or Shopify. They print and ship. Zero inventory, zero upfront cost.</div><a class="resource-link" href="https://printify.com" target="_blank">→ printify.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Fabric Designs</span><div class="resource-name">Spoonflower — Sell Fabric & Wallpaper Designs</div><div class="resource-desc">Upload repeating pattern designs and sell them as fabric, wallpaper, and gift wrap. Earn royalties per yard ordered.</div><a class="resource-link" href="https://www.spoonflower.com/sell" target="_blank">→ spoonflower.com/sell</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Pattern Selling</span><div class="resource-name">Creative Market — Sell Design Assets</div><div class="resource-desc">Sell fashion illustration templates, croquis packs, and surface pattern files to other designers. High-value downloads.</div><a class="resource-link" href="https://creativemarket.com/sell" target="_blank">→ creativemarket.com/sell</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Small-Run Manufacturing</span><div class="resource-name">Alibaba — Small Run Cut & Sew Manufacturing</div><div class="resource-desc">Find factories offering small minimum order quantities (MOQ). Search "cut and sew manufacturer small MOQ" to find partners for producing physical garments.</div><a class="resource-link" href="https://www.alibaba.com" target="_blank">→ alibaba.com</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 What's Required to Sell Clothing</div><p>For POD clothing: no additional requirements — just upload and sell. For physical garments you produce: (1) Register your business as a sole proprietor or LLC, (2) Get product liability insurance ($200–400/year through Next Insurance), (3) Apply proper FTC-required care labels to sewn garments, (4) Check local cottage industry and textile regulations. For Etsy: free account, $0.20 per listing.</p></div>`,
+
+shoe_design:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">👟</span>
+  <span class="detail-badge">Creative · Fashion · Custom</span>
+  <h1 class="detail-title">Custom Shoe Design & Sales</h1>
+  <p class="detail-desc">Custom shoe design is a niche creative business with passionate buyers who pay premium prices. You can design digitally for print-on-demand platforms, hand-paint custom sneakers, or submit designs for licensing. Entry points exist at every budget level from $0 to $300.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$0–$300</div></div>
+    <div class="meta-item"><div class="meta-label">Selling Price</div><div class="meta-value">$80–$500+ per pair</div></div>
+    <div class="meta-item"><div class="meta-label">Platforms</div><div class="meta-value">Etsy, Gelato, Printify, Social</div></div>
+    <div class="meta-item"><div class="meta-label">Difficulty</div><div class="meta-value">Intermediate</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 Platforms to Design & Sell</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-platform">POD Shoes</span><div class="resource-name">Gelato — Print-on-Demand Custom Sneakers</div><div class="resource-desc">Upload your design, they print on sneakers and ship direct to customers. Sell through Etsy or your own Shopify store. No inventory, no risk.</div><a class="resource-link" href="https://www.gelato.com/products/shoes" target="_blank">→ gelato.com — Custom Shoes</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">POD Shoes</span><div class="resource-name">Printify — Custom Sneakers & Slides</div><div class="resource-desc">Custom-printed sneakers, flip flops, and slides. Integrates with Etsy and Shopify for automated fulfillment.</div><a class="resource-link" href="https://printify.com/app/products/footwear" target="_blank">→ printify.com — Footwear</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Hand-Painted</span><div class="resource-name">Etsy — Hand-Painted Custom Sneakers</div><div class="resource-desc">Top Etsy custom sneaker sellers earn $3,000–$10,000/month. Use Angelus leather paint for professional results. Sell custom commissions and ready-made designs.</div><a class="resource-link" href="https://www.etsy.com/search?q=custom+painted+sneakers" target="_blank">→ etsy.com — Research Market</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Supplies</span><div class="resource-name">Angelus Direct — Professional Shoe Paint</div><div class="resource-desc">The industry-standard shoe painting brand. Starter kits from $25. Used by all professional custom sneaker artists.</div><a class="resource-link" href="https://angelusdirect.com" target="_blank">→ angelusdirect.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Tutorials</span><div class="resource-name">YouTube — Custom Sneaker Painting Tutorials</div><div class="resource-desc">Hundreds of free tutorials from professional customizers. Search "custom sneaker painting beginner" to learn the craft for free.</div><a class="resource-link" href="https://www.youtube.com/results?search_query=custom+sneaker+painting+tutorial+beginner" target="_blank">→ YouTube — Learn Free</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 Requirements & Getting Started</div><p>POD shoes: No additional requirements — just design and upload. Hand-painted custom shoes: (1) Register as a sole proprietor (free, takes 10 minutes), (2) Get product liability insurance ($200–400/year via Next Insurance), (3) Price based on materials + time + 50% profit margin, (4) Photograph with a clean white background, (5) Sell on Etsy, through Instagram/TikTok, and at local pop-up markets. DM local sneaker boutiques about potential consignment arrangements.</p></div>`,
+
+public_domain_art:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">🏛️</span>
+  <span class="detail-badge">Creative · Zero Cost · Passive</span>
+  <h1 class="detail-title">Public Domain Art Selling</h1>
+  <p class="detail-desc">Public domain artwork is art whose copyright has expired — meaning anyone can use, modify, and sell it commercially, for free. Masterpieces by Monet, Van Gogh, Klimt, Mucha, Hokusai, Botticelli, and hundreds more are available for free download in high resolution. Sell them as prints, digital downloads, on products, or combined in new formats. This is one of the most overlooked zero-cost income streams available.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Source Cost</div><div class="meta-value">$0 — Free</div></div>
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$0</div></div>
+    <div class="meta-item"><div class="meta-label">Income Type</div><div class="meta-value">Digital Sales / Print Royalties</div></div>
+    <div class="meta-item"><div class="meta-label">Difficulty</div><div class="meta-value">Beginner</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">⚖️ The Legal Rules — What You Must Know</div>
+  <div class="steps-list">
+    <div class="step-item"><div class="step-num">1</div><div class="step-text">In the US, works published before 1928 are in the public domain. This covers nearly all classical masters.</div></div>
+    <div class="step-item"><div class="step-num">2</div><div class="step-text">Photographs of public domain paintings are also public domain under the Bridgeman Art Library v. Corel Corp ruling — meaning museum scans are free to use commercially.</div></div>
+    <div class="step-item"><div class="step-num">3</div><div class="step-text">You CAN legally sell prints, digital downloads, and print-on-demand products featuring these artworks.</div></div>
+    <div class="step-item"><div class="step-num">4</div><div class="step-text">You CANNOT claim you created the original art — be honest about it being a reproduction or print of a classic work.</div></div>
+    <div class="step-item"><div class="step-num">5</div><div class="step-text">Always verify the source site confirms the CC0 or public domain status before listing for sale.</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 Free High-Resolution Public Domain Art Sources</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">490,000+ Images</span><div class="resource-name">The Metropolitan Museum of Art — Open Access</div><div class="resource-desc">Over 490,000 public domain works in high resolution. Free commercial use. Includes Van Gogh, Monet, ancient artifacts, and photography.</div><a class="resource-link" href="https://www.metmuseum.org/art/collection" target="_blank">→ metmuseum.org — Open Access</a></div>
+    <div class="resource-card"><span class="resource-type type-free">700,000+ Images</span><div class="resource-name">Rijksmuseum — Rijksstudio Free Downloads</div><div class="resource-desc">Amsterdam's Rijksmuseum offers 700,000+ high-res images free to download and use commercially, including Dutch Masters like Rembrandt and Vermeer.</div><a class="resource-link" href="https://www.rijksmuseum.nl/en/rijksstudio" target="_blank">→ rijksmuseum.nl — Rijksstudio</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Curated & Restored</span><div class="resource-name">Rawpixel — Cleaned Public Domain Art</div><div class="resource-desc">Pre-cleaned, restored public domain images ready for commercial use. Includes vintage illustrations, botanical prints, and fine art masterpieces.</div><a class="resource-link" href="https://www.rawpixel.com/category/53/public-domain" target="_blank">→ rawpixel.com — Public Domain</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Repository</span><div class="resource-name">Wikimedia Commons — Public Domain Media</div><div class="resource-desc">Massive repository of public domain and CC-licensed images, artworks, and historical photographs from around the world.</div><a class="resource-link" href="https://commons.wikimedia.org" target="_blank">→ commons.wikimedia.org</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Botanical Prints</span><div class="resource-name">Biodiversity Heritage Library — Free Illustrations</div><div class="resource-desc">Stunning vintage botanical and scientific illustrations — all public domain. Perfect for home décor print products.</div><a class="resource-link" href="https://www.biodiversitylibrary.org/browse/illustrations" target="_blank">→ biodiversitylibrary.org</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 How to Turn Art Into Money</div><p>Download a Monet in high resolution → open in Canva → add a minimal white border → list on Etsy as an instant download art print for $3–$8. Upload the same artwork to Printify → sell as a canvas print, poster, phone case, or tote bag for $25–$60. The same artwork earns across multiple formats and platforms, passively, forever. Top Etsy public domain art sellers earn $5,000–$20,000/month doing exactly this with zero product cost.</p></div>`,
+
+steemit_writing:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">🔗</span>
+  <span class="detail-badge">Writing · Revenue Share · Multiple Platforms</span>
+  <h1 class="detail-title">Get Paid to Write Online</h1>
+  <p class="detail-desc">There are dozens of platforms that pay you to write — through crypto rewards, ad revenue share, subscription splits, reader tips, and flat fees per accepted article. Whether you write long-form articles, opinion pieces, personal stories, or guides, there's a platform that will pay you for it — starting today, with no prior publishing credits needed.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$0</div></div>
+    <div class="meta-item"><div class="meta-label">Time to First Earnings</div><div class="meta-value">Immediate</div></div>
+    <div class="meta-item"><div class="meta-label">Payment Types</div><div class="meta-value">Revenue Share / Tips / Crypto / Flat Fee</div></div>
+    <div class="meta-item"><div class="meta-label">Difficulty</div><div class="meta-value">Beginner</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🖊️ Platforms That Pay You to Write</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-platform">Revenue Share</span><div class="resource-name">Medium Partner Program</div><div class="resource-desc">Write articles and earn based on read time from paying Medium members. Many writers earn $100–$5,000/month. Free to join the Partner Program.</div><a class="resource-link" href="https://medium.com/earn" target="_blank">→ medium.com/earn</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Subscriptions</span><div class="resource-name">Substack — Paid Newsletter</div><div class="resource-desc">Build a paid email newsletter. Subscribers pay monthly or annually. Keep 90% of revenue. Free to launch, no tech skills needed.</div><a class="resource-link" href="https://substack.com" target="_blank">→ substack.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Crypto Rewards</span><div class="resource-name">Steemit — Earn Crypto for Writing</div><div class="resource-desc">Write on the blockchain-based platform and earn STEEM cryptocurrency from community upvotes. Decentralized and free to join. Best for long-form, in-depth content.</div><a class="resource-link" href="https://steemit.com" target="_blank">→ steemit.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Crypto Tips</span><div class="resource-name">Publish0x — Readers Tip You in Crypto</div><div class="resource-desc">Write articles and earn cryptocurrency tips from readers. No investment required. Good for finance, tech, and crypto topics.</div><a class="resource-link" href="https://www.publish0x.com" target="_blank">→ publish0x.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Revenue Share</span><div class="resource-name">Vocal Media — Earn Per Read</div><div class="resource-desc">Earn per story view. Covers all topics — travel, entertainment, true crime, personal stories, how-to guides. Bonus challenges with cash prizes.</div><a class="resource-link" href="https://vocal.media/for-creators" target="_blank">→ vocal.media/for-creators</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Flat Fee</span><div class="resource-name">Listverse — $100 Per Accepted List</div><div class="resource-desc">Submit a 10-item listicle on any interesting or unusual topic. If accepted, receive $100 via PayPal. No prior credits required.</div><a class="resource-link" href="https://listverse.com/write-and-get-paid" target="_blank">→ listverse.com/write-and-get-paid</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Flat Fee</span><div class="resource-name">The Penny Hoarder — Pays for Real Money Stories</div><div class="resource-desc">Submit your personal story about saving money, a side hustle, or frugal living. They pay for accepted submissions.</div><a class="resource-link" href="https://www.thepennyhoarder.com/contribute" target="_blank">→ thepennyhoarder.com/contribute</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Newsletter Platform</span><div class="resource-name">Ghost — Pro Subscription Newsletter Tool</div><div class="resource-desc">Alternative to Substack with better SEO and more customization. Great for writers who want full control of their brand.</div><a class="resource-link" href="https://ghost.org" target="_blank">→ ghost.org</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 Best Topics Right Now</div><p>Personal finance stories, side hustle case studies, how-to skill guides, health and wellness, self-improvement, true crime analysis, and niche hobby deep-dives. Articles that are specific, personal, and honest consistently outperform generic advice. Your own experience — even an average experience — told well is worth money.</p></div>`,
+
+stocks_info:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="disclaimer-box">
+  <div class="disclaimer-box-title">⚠️ IMPORTANT DISCLAIMER — READ BEFORE CONTINUING</div>
+  <p>This page is <strong>strictly educational and informational only.</strong> Nothing on this page constitutes financial advice, investment advice, tax advice, or a recommendation to buy, sell, or hold any security or investment product of any kind. Stock market investing involves significant risk, including the complete loss of capital. Past performance is never a guarantee of future results. Individual results vary substantially. You must conduct your own thorough research and consult a licensed, regulated financial advisor, broker, or tax professional before making any investment decisions. This site is not affiliated with, endorsed by, or compensated by any investment platform, broker, or financial product mentioned here.</p>
+</div>
+<div class="detail-hero">
+  <span class="detail-emoji">📈</span>
+  <span class="detail-badge">Informational Only — No Advice Given</span>
+  <h1 class="detail-title">Stock Market — Educational Overview</h1>
+  <p class="detail-desc">The stock market allows individuals to own fractional shares of publicly traded companies. Understanding its basic mechanics is valuable financial literacy. This page provides educational context only and gives no investment recommendations of any kind.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Page Purpose</div><div class="meta-value">Education Only</div></div>
+    <div class="meta-item"><div class="meta-label">Risk Level</div><div class="meta-value">Can Lose All Capital</div></div>
+    <div class="meta-item"><div class="meta-label">Advice Offered</div><div class="meta-value">None — Zero</div></div>
+    <div class="meta-item"><div class="meta-label">Next Step</div><div class="meta-value">Consult a Licensed Advisor</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">📚 Free Educational Resources Only</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">Free Education</span><div class="resource-name">Investopedia — Free Financial Education</div><div class="resource-desc">The most comprehensive free financial education website online. Learn what stocks, ETFs, bonds, and index funds are — purely educational definitions and concepts.</div><a class="resource-link" href="https://www.investopedia.com" target="_blank">→ investopedia.com</a></div>
+    <div class="resource-card"><span class="resource-type type-legal">Official U.S. Gov</span><div class="resource-name">SEC Investor Education — investor.gov</div><div class="resource-desc">The U.S. Securities and Exchange Commission's free, unbiased investor education portal. Learn how markets work, what to watch out for, and how to research investments safely.</div><a class="resource-link" href="https://www.investor.gov" target="_blank">→ investor.gov</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Courses</span><div class="resource-name">Khan Academy — Stocks & Bonds (Free)</div><div class="resource-desc">Free beginner video lessons explaining how stocks, bonds, and markets function. No sign-up required. Start here before anything else.</div><a class="resource-link" href="https://www.khanacademy.org/economics-finance-domain/core-finance" target="_blank">→ khanacademy.org — Finance</a></div>
+    <div class="resource-card"><span class="resource-type type-legal">Verify Advisors</span><div class="resource-name">FINRA BrokerCheck — Verify Any Financial Advisor</div><div class="resource-desc">Before working with any financial advisor, verify their credentials, license, and disciplinary history on the official FINRA BrokerCheck database. Free and essential.</div><a class="resource-link" href="https://brokercheck.finra.org" target="_blank">→ brokercheck.finra.org</a></div>
+  </div>
+</div>
+<div class="warn-box"><div class="warn-box-title">⚠️ Reminder</div><p>This page contains zero investment recommendations. We do not recommend any stocks, ETFs, strategies, or platforms. The resources above are purely educational. Always consult a licensed financial professional before investing any money.</p></div>`,
+
+crypto_info:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="disclaimer-box">
+  <div class="disclaimer-box-title">⚠️ IMPORTANT DISCLAIMER — READ CAREFULLY</div>
+  <p>This page is <strong>strictly educational and informational only.</strong> Nothing here constitutes financial advice, investment advice, tax advice, or a recommendation to buy, sell, or hold any cryptocurrency, digital asset, token, or related product. Cryptocurrency markets are extremely volatile, largely unregulated, and you can lose 100% of any amount invested. This site does not recommend any specific cryptocurrency, exchange, wallet, strategy, or platform. All content is for general education only. You must conduct your own thorough research and consult a qualified financial advisor and tax professional before making any decisions regarding cryptocurrency.</p>
+</div>
+<div class="detail-hero">
+  <span class="detail-emoji">₿</span>
+  <span class="detail-badge">Informational Only — High Risk — No Advice</span>
+  <h1 class="detail-title">Crypto & Digital Assets — Educational Overview</h1>
+  <p class="detail-desc">Cryptocurrency is a digital form of currency secured by cryptography and recorded on a distributed blockchain ledger. The space includes thousands of projects with different use cases, risk profiles, and mechanics. This page is strictly an educational overview — no investment advice is given or implied at any point.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Page Purpose</div><div class="meta-value">Education Only</div></div>
+    <div class="meta-item"><div class="meta-label">Risk Level</div><div class="meta-value">Extremely High</div></div>
+    <div class="meta-item"><div class="meta-label">Advice Offered</div><div class="meta-value">None Whatsoever</div></div>
+    <div class="meta-item"><div class="meta-label">Required</div><div class="meta-value">Independent Research</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">📚 Free Educational Resources</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">Free Education</span><div class="resource-name">Coinbase Learn — Crypto Education for Beginners</div><div class="resource-desc">Free educational articles and videos explaining Bitcoin, Ethereum, blockchain, DeFi, and NFTs in plain language. Educational only.</div><a class="resource-link" href="https://www.coinbase.com/learn" target="_blank">→ coinbase.com/learn</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Research Tool</span><div class="resource-name">CoinGecko — Crypto Market Data</div><div class="resource-desc">Research cryptocurrency price history, market cap, trading volume, and developer activity. A free research tool — not a recommendation to invest.</div><a class="resource-link" href="https://www.coingecko.com" target="_blank">→ coingecko.com</a></div>
+    <div class="resource-card"><span class="resource-type type-legal">Tax — Required by Law</span><div class="resource-name">IRS — Digital Assets Tax Guide</div><div class="resource-desc">The IRS classifies cryptocurrency as property — every trade is a taxable event. Review the official IRS guidance. Tax compliance is legally required for any crypto activity.</div><a class="resource-link" href="https://www.irs.gov/businesses/small-businesses-self-employed/digital-assets" target="_blank">→ IRS Digital Assets Guide</a></div>
+  </div>
+</div>
+<div class="warn-box"><div class="warn-box-title">⚠️ High Risk Warning</div><p>Cryptocurrency values can drop 50–90% or more very rapidly. The market operates 24/7 with no circuit breakers. Many projects fail entirely. This page offers zero investment recommendations of any kind. If you are considering any cryptocurrency investment, consult a licensed financial advisor and tax professional before proceeding.</p></div>`,
+
+affiliate_marketing:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">🔗</span>
+  <span class="detail-badge">Digital · Passive · Scalable</span>
+  <h1 class="detail-title">Affiliate Marketing</h1>
+  <p class="detail-desc">Affiliate marketing means recommending other companies' products through a unique tracking link and earning a commission on every resulting sale. You handle no products, no customer service, no inventory. It works through blogs, YouTube, Instagram, TikTok, Pinterest, email newsletters, and podcasts. It is one of the most scalable passive income models online.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$0</div></div>
+    <div class="meta-item"><div class="meta-label">Commission Range</div><div class="meta-value">1%–75% per sale</div></div>
+    <div class="meta-item"><div class="meta-label">Income Type</div><div class="meta-value">Passive Commissions</div></div>
+    <div class="meta-item"><div class="meta-label">Difficulty</div><div class="meta-value">Beginner–Intermediate</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 Best Affiliate Networks to Join Free</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">Free</span><div class="resource-name">Amazon Associates — 1–10% Commission</div><div class="resource-desc">Promote any Amazon product and earn commission. Easiest program to join. Works with a blog, YouTube channel, or social media profile.</div><a class="resource-link" href="https://affiliate-program.amazon.com" target="_blank">→ affiliate-program.amazon.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free</span><div class="resource-name">ShareASale — 4,000+ Brand Programs</div><div class="resource-desc">Join thousands of brands in one platform. Find affiliate programs for every niche — home, fashion, food, health, tech, and more.</div><a class="resource-link" href="https://www.shareasale.com" target="_blank">→ shareasale.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free</span><div class="resource-name">Impact.com — Premium Brand Affiliates</div><div class="resource-desc">High-paying programs from premium brands. Apply for each brand individually. Higher commissions than Amazon in most categories.</div><a class="resource-link" href="https://impact.com" target="_blank">→ impact.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free</span><div class="resource-name">ClickBank — Digital Products (30–75% Commission)</div><div class="resource-desc">Promote digital courses and ebooks with the highest commission rates in the industry. No website required to start.</div><a class="resource-link" href="https://www.clickbank.com" target="_blank">→ clickbank.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free</span><div class="resource-name">CJ Affiliate (Commission Junction) — Large Network</div><div class="resource-desc">One of the largest affiliate networks with over 3,800 advertisers. Great for established niches like travel, finance, and retail.</div><a class="resource-link" href="https://www.cj.com" target="_blank">→ cj.com</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 How to Succeed at Affiliate Marketing</div><p>Only promote products you have genuinely used or thoroughly researched — authenticity drives conversions. Build content first (blog posts, YouTube videos, or an email list), then add affiliate links to content that already provides real value. The biggest mistake is promoting products with no audience. Build the audience around a specific topic, then monetize that trust with relevant affiliate products. FTC law requires you to disclose affiliate relationships in any content where you earn commissions.</p></div>`,
+
+vending_machines:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">🤖</span>
+  <span class="detail-badge">Physical · Semi-Passive · Cash Business</span>
+  <h1 class="detail-title">Traditional Vending Machine Business</h1>
+  <p class="detail-desc">Vending machines are a proven semi-passive income business. Place machines in high-traffic locations, restock monthly, collect revenue. A single well-placed machine earns $300–$1,500/month net. Scale across multiple machines and locations for serious recurring income. The business runs on weekends and evenings without disrupting a day job or other income streams.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Machine Cost</div><div class="meta-value">$1,000–$5,000 (new) / $300–$2,000 (used)</div></div>
+    <div class="meta-item"><div class="meta-label">Net Per Machine</div><div class="meta-value">$300–$1,500/mo</div></div>
+    <div class="meta-item"><div class="meta-label">Time Per Machine</div><div class="meta-value">2–4 hrs/week</div></div>
+    <div class="meta-item"><div class="meta-label">Difficulty</div><div class="meta-value">Beginner</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 Where to Buy & Learn</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">Buy Used</span><div class="resource-name">UsedVending.com — Used Machines at 50–70% Off</div><div class="resource-desc">The largest marketplace for used vending machines. Buy your first machine well below new pricing to reduce startup risk.</div><a class="resource-link" href="https://www.usedvending.com" target="_blank">→ usedvending.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Buy New</span><div class="resource-name">Seaga — New Vending Machine Supplier</div><div class="resource-desc">US-based vending machine manufacturer. Multiple models for snacks, drinks, and combination units. Direct purchase from manufacturer.</div><a class="resource-link" href="https://www.seaga.com" target="_blank">→ seaga.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Education</span><div class="resource-name">Vending Business Machine — Free Guides</div><div class="resource-desc">Free guides on location scouting, product selection, profit calculations, route building, and scaling from 1 to 10+ machines.</div><a class="resource-link" href="https://www.vendingbusinessmachine.com" target="_blank">→ vendingbusinessmachine.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Community</span><div class="resource-name">r/VendingMachines — Reddit Community</div><div class="resource-desc">Active community of vending machine operators sharing real earnings, location tips, and machine reviews. Unfiltered real-world experience.</div><a class="resource-link" href="https://www.reddit.com/r/VendingMachines" target="_blank">→ reddit.com/r/VendingMachines</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 Location Strategy</div><p>The best locations for traditional machines: mechanic shops, laundromats, barbershops and salons, small offices with 20–50 employees, apartment complex laundry rooms, car dealership waiting rooms, and small manufacturing facilities. Approach location owners with a simple proposal: you supply and maintain the machine, they earn 10–15% of monthly revenue for placement rights. Get the location agreement in writing with a minimum 1-year term.</p></div>`,
+
+retail_placement:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">🏪</span>
+  <span class="detail-badge">Physical Product · Wholesale · Retail</span>
+  <h1 class="detail-title">Get Your Products Into Retail Stores</h1>
+  <p class="detail-desc">Getting your product onto retail shelves — from local boutiques to major chains like Target or Walmart — is more achievable than ever. Free platforms like RangeMe let you pitch to thousands of buyers without a trade show. This guide covers free tools, direct submission portals, and strategies used by successful small product brands to land retail placement.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$0–$200</div></div>
+    <div class="meta-item"><div class="meta-label">Income Type</div><div class="meta-value">Wholesale B2B Sales</div></div>
+    <div class="meta-item"><div class="meta-label">Income Potential</div><div class="meta-value">$1,000–$50,000+/mo</div></div>
+    <div class="meta-item"><div class="meta-label">Difficulty</div><div class="meta-value">Intermediate</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔑 Free Platforms to Pitch Retailers</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">Free to Join</span><div class="resource-name">RangeMe — #1 Retail Buyer Discovery Platform</div><div class="resource-desc">The leading platform where 200,000+ retail buyers (Target, Whole Foods, CVS, Ulta, and more) actively discover new products. Create a free supplier profile, upload your product, and buyers come to you. Free Basic plan available — no trade show required.</div><a class="resource-link" href="https://www.rangeme.com" target="_blank">→ rangeme.com — Create Free Profile</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free to List</span><div class="resource-name">Faire — Wholesale Marketplace for Boutiques</div><div class="resource-desc">The largest wholesale platform for independent retailers and boutiques. List your brand for free. Over 700,000 boutique retailers actively shop Faire. Great for handmade, artisan, and specialty brands. No upfront fees — Faire takes a commission on first-time retailer orders.</div><a class="resource-link" href="https://www.faire.com/brand/apply" target="_blank">→ faire.com — Apply as a Brand</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free to Apply</span><div class="resource-name">Abound — Wholesale Platform for Indie Brands</div><div class="resource-desc">Wholesale marketplace connecting independent brands with independent retailers across the U.S. Free to apply and list products. Great alternative to Faire, especially for gift, home, beauty, and lifestyle products.</div><a class="resource-link" href="https://www.abound.com/brands" target="_blank">→ abound.com — Apply as a Brand</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free to Submit</span><div class="resource-name">Walmart Open Call — Direct Supplier Program</div><div class="resource-desc">Walmart hosts an annual Open Call event where U.S.-made product brands can pitch directly to Walmart buyers. Applications are free. Past participants have landed multi-million dollar deals. Applications typically open in spring.</div><a class="resource-link" href="https://corporate.walmart.com/open-call" target="_blank">→ walmart.com Open Call</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free to Apply</span><div class="resource-name">Target's Open Door — Direct Pitch to Target</div><div class="resource-desc">Target's supplier discovery portal allows small businesses to submit products for consideration by Target buyers. No broker or agent needed. Free to apply, response times vary.</div><a class="resource-link" href="https://suppliers.target.com" target="_blank">→ suppliers.target.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free to Apply</span><div class="resource-name">Whole Foods — Local & Emerging Accelerator Program</div><div class="resource-desc">Whole Foods offers a Local and Emerging Accelerator Program for small food and beverage brands. Apply to get into regional Whole Foods stores with support. Also check their direct buyer contact portal by region.</div><a class="resource-link" href="https://www.wholefoodsmarket.com/sell-whole-foods-market" target="_blank">→ Sell to Whole Foods</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Wholesale</span><div class="resource-name">Tundra — Zero-Commission Wholesale Platform</div><div class="resource-desc">Unlike Faire, Tundra charges zero commission on sales — you keep 100% of your wholesale revenue. Good for brands that want direct-to-retailer wholesale with no platform cut.</div><a class="resource-link" href="https://www.tundra.com/suppliers" target="_blank">→ tundra.com — Supplier Info</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Portal</span><div class="resource-name">Costco Vendor Portal — Submit to Costco</div><div class="resource-desc">Costco has a formal new vendor submission process. Products need strong margins, high volume potential, and UPC codes. Free to submit through their online portal.</div><a class="resource-link" href="https://supplierportal.costco.com" target="_blank">→ Costco Supplier Portal</a></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">📖 How to Get Ready Before You Pitch</div>
+  <div class="steps-list">
+    <div class="step-item"><div class="step-num">1</div><div class="step-text"><strong>Have a retail-ready product:</strong> You need a barcode (UPC), professional packaging with ingredient/content labels, MSRP pricing, and a wholesale price (typically 50% of retail). Buyers will not consider products without these basics.</div></div>
+    <div class="step-item"><div class="step-num">2</div><div class="step-text"><strong>Know your numbers:</strong> Calculate your cost of goods, wholesale price, suggested retail price (keystone = 2x wholesale), and minimum order quantities (MOQ). Retailers need at least 40–60% margin to carry your product.</div></div>
+    <div class="step-item"><div class="step-num">3</div><div class="step-text"><strong>Get a DUNS Number (free):</strong> Major retailers require a D&B DUNS number before onboarding. Register free at dnb.com/duns-number — takes 1–30 business days.</div></div>
+    <div class="step-item"><div class="step-num">4</div><div class="step-text"><strong>Create a line sheet:</strong> A professional 1–2 page PDF showing your products, wholesale prices, MOQs, lead times, and contact info. Canva has free line sheet templates. This is your pitch document for buyers.</div></div>
+    <div class="step-item"><div class="step-num">5</div><div class="step-text"><strong>Start local:</strong> Approach local boutiques, gift shops, pharmacies, and specialty stores in person or via email with your line sheet. Local placement builds proof of sales that larger retailers want to see.</div></div>
+    <div class="step-item"><div class="step-num">6</div><div class="step-text"><strong>Build social proof:</strong> Sales data, reviews, media coverage, and existing retail accounts make your pitch dramatically stronger. Document every win.</div></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 RangeMe Pro Tip</div><p>On RangeMe, fill out your profile 100% — products with complete profiles (images, certifications, sales data, social media links) get dramatically more buyer views. Upload a professional product photo with a white background. Buyers sort by completeness and you won't appear in searches without a full profile.</p></div>
+<div class="warn-box"><div class="warn-box-title">⚠️ Avoid These Mistakes</div><p>Do not approach major retailers before you can handle volume orders. If Target asks for 10,000 units and you can only make 500, you'll lose the account permanently. Build your production capacity and supply chain before pitching big box stores. Never pay a "retail broker" upfront fees without verifying their track record.</p></div>
+<div class="note-inline">⚠️ Retail placement involves legal contracts, liability insurance, and financial commitments. Consult a business attorney and accountant before signing retailer vendor agreements.</div>`,
+
+shein_marketplace:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">👗</span>
+  <span class="detail-badge">E-Commerce · Fashion · Global Marketplace</span>
+  <h1 class="detail-title">Sell on SHEIN Marketplace</h1>
+  <p class="detail-desc">SHEIN has opened its platform to third-party sellers through SHEIN Marketplace, giving independent brands and sellers access to over 150 million customers worldwide. Unlike the old SHEIN model (direct-from-China), the marketplace allows U.S. and international sellers to list their own products and fulfill orders themselves — similar to Amazon's third-party model. There are no upfront listing fees.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$0 (No listing fees)</div></div>
+    <div class="meta-item"><div class="meta-label">Commission</div><div class="meta-value">10–20% per sale</div></div>
+    <div class="meta-item"><div class="meta-label">Income Potential</div><div class="meta-value">$500–$20,000+/mo</div></div>
+    <div class="meta-item"><div class="meta-label">Ship From</div><div class="meta-value">Your location (seller fulfills)</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">✅ What You Can Sell on SHEIN Marketplace</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-platform">Approved</span><div class="resource-name">Women's, Men's & Kids' Clothing</div><div class="resource-desc">Apparel of all kinds — dresses, tops, bottoms, activewear, swimwear, loungewear, formalwear, and more. This is SHEIN's core category and where most marketplace sellers see the highest traffic.</div></div>
+    <div class="resource-card"><span class="resource-type type-platform">Approved</span><div class="resource-name">Shoes & Footwear</div><div class="resource-desc">Sneakers, heels, sandals, boots, flats, and athletic shoes. Must meet sizing and safety standards.</div></div>
+    <div class="resource-card"><span class="resource-type type-platform">Approved</span><div class="resource-name">Accessories & Jewelry</div><div class="resource-desc">Bags, handbags, sunglasses, hats, scarves, belts, costume jewelry, and fashion accessories.</div></div>
+    <div class="resource-card"><span class="resource-type type-platform">Approved</span><div class="resource-name">Beauty & Personal Care</div><div class="resource-desc">Makeup, skincare, hair products, and personal care items. Must comply with safety and labeling regulations. FDA-registered products preferred.</div></div>
+    <div class="resource-card"><span class="resource-type type-platform">Approved</span><div class="resource-name">Home & Living</div><div class="resource-desc">Home décor, bedding, kitchen goods, storage solutions, and lifestyle products. A growing category on SHEIN.</div></div>
+    <div class="resource-card"><span class="resource-type type-platform">Approved</span><div class="resource-name">Toys, Tech Accessories & More</div><div class="resource-desc">Electronics accessories, phone cases, toys, and hobby items. Category eligibility may vary by seller location — check current guidelines during application.</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">📋 Requirements to Sell on SHEIN Marketplace</div>
+  <div class="steps-list">
+    <div class="step-item"><div class="step-num">1</div><div class="step-text"><strong>Business registration:</strong> You must have a registered business entity (LLC, sole proprietorship, or corporation) with an EIN. Personal selling is not available — SHEIN marketplace is for business sellers.</div></div>
+    <div class="step-item"><div class="step-num">2</div><div class="step-text"><strong>Product compliance:</strong> Products must meet U.S. safety and labeling standards. Clothing must have fiber content labels. Prohibited items include counterfeit goods, weapons, hazardous materials, and IP-infringing products.</div></div>
+    <div class="step-item"><div class="step-num">3</div><div class="step-text"><strong>Fulfillment capability:</strong> You fulfill your own orders — not SHEIN. You need inventory on hand, reliable packaging, and ability to ship within the required timeframe stated in your seller agreement.</div></div>
+    <div class="step-item"><div class="step-num">4</div><div class="step-text"><strong>Product photography:</strong> SHEIN has strict image requirements — white or clean background, multiple angles, lifestyle shots. High-quality photography is non-negotiable for approval and visibility.</div></div>
+    <div class="step-item"><div class="step-num">5</div><div class="step-text"><strong>Competitive pricing:</strong> SHEIN's customer base expects lower price points. Your pricing must be competitive within the platform. Review category pricing before applying.</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 Direct Links — Apply & Learn</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-platform">Official</span><div class="resource-name">SHEIN Seller Center — Apply to Sell</div><div class="resource-desc">The official SHEIN seller registration and application portal. Create your seller account, submit your business information, and apply for approval.</div><a class="resource-link" href="https://seller.shein.com" target="_blank">→ seller.shein.com — Apply Now</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Official</span><div class="resource-name">SHEIN Marketplace Help Center</div><div class="resource-desc">Official SHEIN documentation on seller policies, product requirements, commission rates, payment schedules, and prohibited items. Read this before applying.</div><a class="resource-link" href="https://seller.shein.com/help" target="_blank">→ SHEIN Seller Help Center</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Research</span><div class="resource-name">YouTube — SHEIN Seller Tutorials 2025</div><div class="resource-desc">Search "how to sell on SHEIN marketplace 2025" for walkthrough videos from current sellers covering the application, listing process, and earnings breakdown.</div><a class="resource-link" href="https://www.youtube.com/results?search_query=how+to+sell+on+SHEIN+marketplace+2025" target="_blank">→ YouTube Tutorials</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Community</span><div class="resource-name">Reddit — Real Seller Experiences</div><div class="resource-desc">Find real seller experiences, approval tips, and honest reviews of SHEIN marketplace from actual sellers in Reddit communities.</div><a class="resource-link" href="https://www.reddit.com/search/?q=SHEIN+marketplace+seller" target="_blank">→ Reddit SHEIN Seller Discussions</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 Approval Tips</div><p>SHEIN marketplace is selective during the application process. Sellers with an established brand presence (Shopify store, Instagram, existing sales history) are approved faster. Have your business documents ready: EIN, business registration, and at least 10 product photos at application time. Commission rates typically range from 10–20% depending on category.</p></div>
+<div class="warn-box"><div class="warn-box-title">⚠️ Important Notes</div><p>SHEIN's marketplace policies and commission structures can change. Always read the current seller agreement carefully before listing. Do not list products you do not own the rights to — SHEIN has strict IP enforcement and counterfeit violations result in permanent account suspension. Check SHEIN's prohibited items list thoroughly before applying.</p></div>`,
+
+product_manufacturing:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">🏭</span>
+  <span class="detail-badge">Physical Product · Private Label · Sourcing</span>
+  <h1 class="detail-title">Get Your Products Manufactured</h1>
+  <p class="detail-desc">Whether you have a product idea you want to bring to life or you're looking to create a private label brand, finding the right manufacturer is the critical first step. This guide covers free platforms to find U.S.-based and overseas manufacturers, how to request quotes, what to watch for, and how to protect your idea — from prototype to full production run.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$200–$5,000+</div></div>
+    <div class="meta-item"><div class="meta-label">MOQ Typical Range</div><div class="meta-value">25–1,000 units</div></div>
+    <div class="meta-item"><div class="meta-label">Lead Time</div><div class="meta-value">2–16 weeks typical</div></div>
+    <div class="meta-item"><div class="meta-label">Best For</div><div class="meta-value">Private Label, Brands</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 Manufacturing Discovery Platforms</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-platform">U.S. Manufacturers</span><div class="resource-name">Maker's Row — U.S. Factory Directory</div><div class="resource-desc">The leading platform to find American manufacturers across apparel, accessories, beauty, food, electronics, and more. Browse verified U.S. factories by category, location, and minimum order. Free to search — perfect for brands that want "Made in USA" products.</div><a class="resource-link" href="https://makersrow.com" target="_blank">→ makersrow.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free to Browse</span><div class="resource-name">Alibaba — Global Manufacturer Marketplace</div><div class="resource-desc">The world's largest B2B manufacturing marketplace. Find manufacturers in China, India, Vietnam, and elsewhere for nearly any product type. Free to search and contact suppliers. Use Trade Assurance for payment protection. Request samples before placing large orders.</div><a class="resource-link" href="https://www.alibaba.com" target="_blank">→ alibaba.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free to Use</span><div class="resource-name">ThomasNet — U.S. & North American Manufacturers</div><div class="resource-desc">One of the oldest and most comprehensive directories of North American manufacturers, industrial suppliers, and fabricators. Free to search. Great for finding specialized or technical product manufacturers domestically.</div><a class="resource-link" href="https://www.thomasnet.com" target="_blank">→ thomasnet.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Global Sourcing</span><div class="resource-name">Global Sources — Asia-Pacific Manufacturers</div><div class="resource-desc">Similar to Alibaba but with a focus on verified, export-ready Asian manufacturers. Strong for electronics, fashion, and consumer goods. Free buyer registration.</div><a class="resource-link" href="https://www.globalsources.com" target="_blank">→ globalsources.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Managed Sourcing</span><div class="resource-name">Sourcify — Managed Manufacturing</div><div class="resource-desc">Sourcify connects you with pre-vetted factories and provides a managed sourcing experience — good for first-timers who want help navigating overseas manufacturing.</div><a class="resource-link" href="https://www.sourcify.com" target="_blank">→ sourcify.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Directory</span><div class="resource-name">Kompass — International Manufacturer Database</div><div class="resource-desc">B2B directory covering 70+ countries. Free to search for manufacturers in Europe, Asia, and the Americas by product type and certification.</div><a class="resource-link" href="https://us.kompass.com" target="_blank">→ kompass.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free to Browse</span><div class="resource-name">DHgate — Small-Batch Overseas Manufacturers</div><div class="resource-desc">Lower MOQs than Alibaba — some suppliers start at 1–10 units, making it ideal for testing products before committing to large production runs. Strong for fashion, accessories, and novelty items.</div><a class="resource-link" href="https://www.dhgate.com" target="_blank">→ dhgate.com</a></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">📖 How to Work With a Manufacturer — Step by Step</div>
+  <div class="steps-list">
+    <div class="step-item"><div class="step-num">1</div><div class="step-text"><strong>Define your product spec sheet:</strong> Before contacting any manufacturer, create a detailed spec sheet — dimensions, materials, colors, weight, packaging requirements, and any certifications needed (FDA, CE, etc.). The more specific you are, the more accurate quotes you'll receive.</div></div>
+    <div class="step-item"><div class="step-num">2</div><div class="step-text"><strong>Contact 5–10 manufacturers:</strong> Never rely on one. Send your spec sheet to multiple manufacturers and compare quotes, lead times, MOQs, and communication responsiveness. Fast, clear communicators make better manufacturing partners.</div></div>
+    <div class="step-item"><div class="step-num">3</div><div class="step-text"><strong>Order samples first — always:</strong> Never skip the sample stage. Pay for a sample (typically $30–$300) before committing to a production run. Test quality, dimensions, durability, and packaging with the actual product in hand.</div></div>
+    <div class="step-item"><div class="step-num">4</div><div class="step-text"><strong>Negotiate terms:</strong> Typical payment terms are 30% deposit, 70% before shipment. Never pay 100% upfront to a new manufacturer. Use Alibaba Trade Assurance or a sourcing agent for added protection overseas.</div></div>
+    <div class="step-item"><div class="step-num">5</div><div class="step-text"><strong>Sign an NDA and manufacturing agreement:</strong> Protect your product idea with a Non-Disclosure Agreement before sharing proprietary designs. Free NDA templates available on Docracy.com.</div></div>
+    <div class="step-item"><div class="step-num">6</div><div class="step-text"><strong>Consider third-party quality inspection:</strong> For overseas manufacturing, hire a third-party inspection company (e.g., QIMA, AsiaInspection) to inspect products before they leave the factory — typically $150–$350 per inspection. This prevents receiving defective bulk orders.</div></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 U.S. vs. Overseas Manufacturing</div><p>U.S. manufacturing (via Maker's Row, ThomasNet) typically costs 2–5x more per unit but offers faster lead times, easier communication, "Made in USA" branding, and simpler quality control. Overseas manufacturing (Alibaba, Global Sources) offers lower per-unit costs but requires more due diligence, longer lead times (8–16 weeks), and shipping/import duty costs. Many brands start overseas to validate demand, then shift to domestic manufacturing as they scale.</p></div>
+<div class="warn-box"><div class="warn-box-title">⚠️ Protect Your Idea</div><p>Before sharing detailed product designs or proprietary specs with any manufacturer, consider filing a provisional patent application ($160–$320 with USPTO) to establish a priority date. Consult a licensed patent attorney before disclosing inventions. Free patent searches available at ppubs.uspto.gov</p></div>
+<div class="note-inline">⚠️ Manufacturing agreements are legal contracts. Consult a qualified business attorney before signing agreements with manufacturers, especially overseas. This information is educational only and not legal advice.</div>`,
+
+notary_detail:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">⚖️</span>
+  <span class="detail-badge">California · Legal · Local Services</span>
+  <h1 class="detail-title">Mobile Notary & Loan Signing Agent (California)</h1>
+  <p class="detail-desc">A notary public is a state-commissioned official authorized to witness signatures, administer oaths, and certify documents. In California, you can also become a Notary Signing Agent (NSA) — specializing in signing real estate loan documents — which pays $75–$200+ per appointment. This is one of the most accessible professional services businesses you can start for under $300 in California.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$50–$300 total</div></div>
+    <div class="meta-item"><div class="meta-label">Income Per Job</div><div class="meta-value">$75–$200+ per signing</div></div>
+    <div class="meta-item"><div class="meta-label">Commission Term</div><div class="meta-value">4 years (California)</div></div>
+    <div class="meta-item"><div class="meta-label">State</div><div class="meta-value">California-Specific Guide</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">📋 Steps to Become a California Notary</div>
+  <div class="steps-list">
+    <div class="step-item"><div class="step-num">1</div><div class="step-text"><strong>Meet California requirements:</strong> Must be at least 18 years old, a legal California resident, and able to pass a background check. No prior legal experience required.</div></div>
+    <div class="step-item"><div class="step-num">2</div><div class="step-text"><strong>Complete a 6-hour notary education course:</strong> California requires a 6-hour state-approved course for new applicants. Approved course providers are listed by the California Secretary of State. Courses available online for $25–$75.</div></div>
+    <div class="step-item"><div class="step-num">3</div><div class="step-text"><strong>Pass the California Notary Exam:</strong> Take the state exam administered by an approved vendor (currently PSI Services). Exam fee is $40. Exam is 45 questions, multiple choice, 70% passing score required.</div></div>
+    <div class="step-item"><div class="step-num">4</div><div class="step-text"><strong>Complete a Live Scan background check:</strong> Required for all California notary applicants. Live Scan fingerprinting costs approximately $20–$75 at participating locations.</div></div>
+    <div class="step-item"><div class="step-num">5</div><div class="step-text"><strong>File your application and pay the $40 commission fee</strong> through the California Secretary of State's office. Commission is valid for 4 years.</div></div>
+    <div class="step-item"><div class="step-num">6</div><div class="step-text"><strong>Purchase your notary bond and supplies:</strong> California requires a $15,000 notary bond (typically costs $30–$50/year). Also purchase your notary seal/stamp ($20–$40) and notary journal (required by CA law, ~$15).</div></div>
+    <div class="step-item"><div class="step-num">7</div><div class="step-text"><strong>Optional — Become a Loan Signing Agent:</strong> Take an additional NSA course through the National Notary Association (NNA) or Signing Agent University to specialize in real estate loan packages, which pay $100–$200 per signing. Get E&O insurance ($75–$100/yr).</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 Official Resources & Free Tools</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-legal">Official</span><div class="resource-name">California Secretary of State — Notary Division</div><div class="resource-desc">Official state page with all requirements, approved exam vendors, application forms, and renewal information for California notaries.</div><a class="resource-link" href="https://www.sos.ca.gov/notary" target="_blank">→ sos.ca.gov/notary</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Get Signings</span><div class="resource-name">Snapdocs — Signing Orders Platform</div><div class="resource-desc">The largest platform for title companies and escrow officers to find notary signing agents. Free to create a profile and receive signing orders in your area.</div><a class="resource-link" href="https://www.snapdocs.com/notaries" target="_blank">→ snapdocs.com — Notary Signup</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Get Signings</span><div class="resource-name">Notary Rotary — Signing Agent Directory</div><div class="resource-desc">Free directory where title companies and signing services find notary agents. Create a free profile to get discovered and receive signing requests.</div><a class="resource-link" href="https://www.notaryrotary.com" target="_blank">→ notaryrotary.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Training</span><div class="resource-name">Loan Signing System — Free YouTube Training</div><div class="resource-desc">Popular signing agent training program with dozens of free YouTube lessons on how to conduct loan signings professionally and build a signing agent business.</div><a class="resource-link" href="https://www.youtube.com/results?search_query=loan+signing+system+free+training" target="_blank">→ Free YouTube Training</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Get Signings</span><div class="resource-name">SigningOrder — Signing Service Platform</div><div class="resource-desc">Connect with title companies looking for signing agents. Free registration, receive orders in your county/zip code when you're available.</div><a class="resource-link" href="https://www.signingorder.com" target="_blank">→ signingorder.com</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 Income Strategy</div><p>Most mobile notaries earn $50–$150 for general notarizations. Loan signing agents earn $100–$200 per appointment because packages are longer and more specialized. To maximize income: get on multiple signing service platforms (Snapdocs, SigningOrder, Notary Rotary), build direct relationships with local title companies, and be reliable and responsive. Full-time signing agents in California can earn $60,000–$100,000/year working independently.</p></div>
+<div class="note-inline">⚠️ Notary law is strictly regulated in California. Always refer to the California Secretary of State for current requirements. This is educational information only and not legal advice.</div>`,
+
+advocate_assistant:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">🤝</span>
+  <span class="detail-badge">Healthcare · Remote/Local · Services</span>
+  <h1 class="detail-title">Patient / Disability Advocate Assistant</h1>
+  <p class="detail-desc">Patient advocates and disability advocates help individuals navigate complex healthcare systems, insurance denials, medical billing disputes, and disability benefit applications (like SSDI and SSI). As an advocate assistant, you support licensed advocates or work independently (within legal limits) helping clients organize documents, file appeals, communicate with providers, and understand their rights. This is a growing field with strong demand and meaningful work.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$0–$100</div></div>
+    <div class="meta-item"><div class="meta-label">Income Type</div><div class="meta-value">Hourly or Per-Case Fee</div></div>
+    <div class="meta-item"><div class="meta-label">Income Potential</div><div class="meta-value">$25–$75/hour</div></div>
+    <div class="meta-item"><div class="meta-label">Difficulty</div><div class="meta-value">Beginner–Intermediate</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 Free Training, Certification & Resources</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">Free Training</span><div class="resource-name">Patient Advocate Foundation — Free Resources</div><div class="resource-desc">Nonprofit providing free case management services and extensive free educational materials on insurance appeals, medical billing, and patient rights. Great starting point for learning the field.</div><a class="resource-link" href="https://www.patientadvocate.org" target="_blank">→ patientadvocate.org</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Info</span><div class="resource-name">Social Security Administration — SSDI & SSI Guide</div><div class="resource-desc">Free official resource explaining how Social Security Disability Insurance (SSDI) and Supplemental Security Income (SSI) work. Essential reading for anyone helping clients with disability applications.</div><a class="resource-link" href="https://www.ssa.gov/disability" target="_blank">→ ssa.gov/disability</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Certification</span><div class="resource-name">BCPA — Board Certified Patient Advocate</div><div class="resource-desc">The only nationally recognized certification for patient advocates. Not required to practice as an advocate, but adds credibility. Free study resources available on their website.</div><a class="resource-link" href="https://www.bcpacertification.org" target="_blank">→ bcpacertification.org</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Community</span><div class="resource-name">AdvoConnection — Advocate Directory & Training</div><div class="resource-desc">Directory of professional patient advocates and free resources for those wanting to start or grow an advocacy practice. Includes information on how to price services and find clients.</div><a class="resource-link" href="https://www.advoconnection.com" target="_blank">→ advoconnection.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Learning</span><div class="resource-name">Alliance of Professional Health Advocates</div><div class="resource-desc">Professional association for health advocates with free articles, guides, and a community for new advocates learning the business of running an advocacy practice.</div><a class="resource-link" href="https://www.aphadvocates.org" target="_blank">→ aphadvocates.org</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Courses</span><div class="resource-name">Coursera — Healthcare & Patient Rights Courses</div><div class="resource-desc">Search for free courses on health policy, patient rights, medical terminology, and healthcare navigation. Audit most courses for free to build foundational knowledge.</div><a class="resource-link" href="https://www.coursera.org/search?query=patient+advocate" target="_blank">→ Coursera Free Courses</a></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">📖 What Advocate Assistants Do</div>
+  <div class="steps-list">
+    <div class="step-item"><div class="step-num">1</div><div class="step-text"><strong>Insurance appeal assistance:</strong> Help clients write and file appeals for denied insurance claims. Many denials are overturned on appeal when properly documented. You don't need a law license to help with insurance appeals in most states — but you cannot practice law.</div></div>
+    <div class="step-item"><div class="step-num">2</div><div class="step-text"><strong>Medical bill review and negotiation:</strong> Help clients review itemized medical bills for errors (a significant percentage contain billing errors). Assist in negotiating payment plans or reductions with providers and hospitals.</div></div>
+    <div class="step-item"><div class="step-num">3</div><div class="step-text"><strong>Disability application support:</strong> Help clients gather and organize medical records, complete SSA forms, and understand the SSDI/SSI application and appeals process. Note: Representing someone before SSA for pay requires accreditation — discuss this carefully with a legal advisor.</div></div>
+    <div class="step-item"><div class="step-num">4</div><div class="step-text"><strong>Provider communication:</strong> Act as a liaison between patients and healthcare providers, helping clients understand diagnoses, treatment plans, and their rights under HIPAA.</div></div>
+    <div class="step-item"><div class="step-num">5</div><div class="step-text"><strong>Find financial assistance programs:</strong> Research and connect clients with pharmaceutical patient assistance programs, nonprofit grants, hospital charity care programs, and state/local aid resources.</div></div>
+  </div>
+</div>
+<div class="warn-box"><div class="warn-box-title">⚠️ Important Legal Boundaries</div><p>Patient/disability advocates are not attorneys and cannot provide legal advice, represent clients in court, or provide services that constitute the practice of law. Rules vary by state. Always consult a licensed attorney about the legal scope of advocacy services in your state before charging for services. Carry professional liability (E&O) insurance.</p></div>
+<div class="note-inline">⚠️ This information is for educational purposes only and is not legal or medical advice. Consult a licensed attorney regarding the legal scope of patient and disability advocacy services in your state.</div>`,
+
+ca_cottage_food:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">🍰</span>
+  <span class="detail-badge">California · Food Business · Home-Based</span>
+  <h1 class="detail-title">California Cottage Food Business</h1>
+  <p class="detail-desc">California's Cottage Food Law allows residents to prepare and sell certain foods made in their home kitchen without a commercial kitchen license. This is one of the most accessible food business options available — you can start selling from home with minimal startup cost. However, there are important rules about what you can sell, where you can sell it, and how much you can earn annually.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$50–$300</div></div>
+    <div class="meta-item"><div class="meta-label">Annual Revenue Cap</div><div class="meta-value">$75,000 (Class A & B)</div></div>
+    <div class="meta-item"><div class="meta-label">Inspection Required</div><div class="meta-value">Class A: No · Class B: Yes</div></div>
+    <div class="meta-item"><div class="meta-label">State</div><div class="meta-value">California Only</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">⚠️ Class A vs. Class B — Critical Differences</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">Class A — No Inspection</span><div class="resource-name">Class A: Direct Sales Only — No Health Permit Required</div><div class="resource-desc">Class A allows you to sell directly to consumers only — at farmers markets, craft fairs, from your home, and online with local delivery/pickup. No health permit is required and your kitchen is NOT subject to health department inspection. You must register with your county. Annual gross sales limit: $75,000. This is the most common starting point for home food sellers in California.</div></div>
+    <div class="resource-card"><span class="resource-type type-research">Class B — Inspection Required</span><div class="resource-name">Class B: Indirect Sales — Permit + Kitchen Inspection Required</div><div class="resource-desc">Class B allows you to sell through third parties such as restaurants, grocery stores, and retail shops — in addition to direct sales. This requires a health permit from your county and your home kitchen IS subject to inspection by the local health department. Annual gross sales limit: $75,000. Class B requires more compliance but opens wholesale and retail distribution channels.</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">✅ What You CAN Sell (Approved Cottage Foods in California)</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">Approved</span><div class="resource-name">Baked Goods (Non-Refrigerated)</div><div class="resource-desc">Cookies, cakes, breads, muffins, scones, brownies, biscotti, pies (fruit, not custard), pastries, and donuts. One of the most popular cottage food categories.</div></div>
+    <div class="resource-card"><span class="resource-type type-free">Approved</span><div class="resource-name">Jams, Jellies & Preserves</div><div class="resource-desc">High-sugar, high-acid jams and jellies (pH 4.6 or below) are approved. Must follow tested recipes from sources like USDA or Ball Canning. Improperly canned low-acid foods are NOT approved and pose a botulism risk.</div></div>
+    <div class="resource-card"><span class="resource-type type-free">Approved</span><div class="resource-name">Candy & Confections</div><div class="resource-desc">Hard candy, toffee, brittles, fudge (without refrigeration), chocolate-covered pretzels and fruits (shelf-stable), caramel corn, and cotton candy.</div></div>
+    <div class="resource-card"><span class="resource-type type-free">Approved</span><div class="resource-name">Dry Goods</div><div class="resource-desc">Granola, cereal, trail mix, dried herbs, spice blends, roasted nuts, popcorn, and dried pasta (egg-free). Non-perishable shelf-stable dry mixes.</div></div>
+    <div class="resource-card"><span class="resource-type type-free">Approved</span><div class="resource-name">Honey</div><div class="resource-desc">Raw and processed honey is approved as a cottage food. If you also keep bees, this pairs naturally with a small beekeeping operation.</div></div>
+    <div class="resource-card"><span class="resource-type type-research">NOT Approved</span><div class="resource-name">Foods NOT Permitted Under Cottage Food Law</div><div class="resource-desc">Meat products, dairy (cheese, butter, milk), fresh fruit/vegetable juices, foods requiring refrigeration (cream-filled pastries, custards, cheesecakes), canned low-acid vegetables, fermented foods (with exceptions). Selling these from a home kitchen requires a licensed commercial facility.</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">📋 Required Label Information on Every Package</div>
+  <div class="steps-list">
+    <div class="step-item"><div class="step-num">1</div><div class="step-text">Name of the product</div></div>
+    <div class="step-item"><div class="step-num">2</div><div class="step-text">Your name and home address</div></div>
+    <div class="step-item"><div class="step-num">3</div><div class="step-text">Required statement in 12-point font: <strong>"Made in a Home Kitchen — This product was produced in a home kitchen that has not been inspected by the Department of Public Health"</strong></div></div>
+    <div class="step-item"><div class="step-num">4</div><div class="step-text">List of all ingredients in descending order by weight</div></div>
+    <div class="step-item"><div class="step-num">5</div><div class="step-text">Net weight or volume of the product</div></div>
+    <div class="step-item"><div class="step-num">6</div><div class="step-text">Allergen declaration if applicable: Contains: Wheat, Eggs, Milk, Tree Nuts, etc.</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 Official Resources & Free Guides</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-legal">Official</span><div class="resource-name">California Department of Public Health — Cottage Food</div><div class="resource-desc">Official CDPH page with the complete list of approved cottage foods, labeling requirements, class definitions, and links to register with your county.</div><a class="resource-link" href="https://www.cdph.ca.gov/Programs/CEH/DFDCS/CDFD/Pages/FDBPrograms/FoodSafetyProgram/CottageFoodOperations.aspx" target="_blank">→ CDPH Cottage Food Page</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Guide</span><div class="resource-name">CottageFoodLaw.com — Plain English Guide</div><div class="resource-desc">Community-maintained plain-English guide to California's cottage food law, frequently updated with class requirements, county-specific notes, and approved food lists.</div><a class="resource-link" href="https://www.cottagefoodlaw.com" target="_blank">→ cottagefoodlaw.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Selling</span><div class="resource-name">California Farmers Markets — Sell Direct</div><div class="resource-desc">California farmers markets are one of the best Class A sales channels. Search for markets near you and apply as a cottage food vendor. Most markets require a copy of your county registration.</div><a class="resource-link" href="https://www.cafarmersmkts.com" target="_blank">→ CA Farmers Markets Directory</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Online Sales</span><div class="resource-name">Goldbelly — Sell Online (Local Delivery/Pickup)</div><div class="resource-desc">Class A cottage food sellers can take online orders for local delivery or pickup. Goldbelly and Instagram DMs are commonly used by CA cottage food sellers.</div><a class="resource-link" href="https://www.goldbelly.com/sell" target="_blank">→ goldbelly.com/sell</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 Register With Your County First</div><p>Before selling anything, register your cottage food operation with your local county environmental health department. Registration is typically simple and low-cost ($0–$100 depending on county). Class A registrations in most California counties do not require an inspection — you self-certify that your kitchen meets basic sanitation standards. Contact your county health department directly to get county-specific forms and requirements, as these vary slightly by county.</p></div>
+<div class="warn-box"><div class="warn-box-title">⚠️ Important Compliance Notes</div><p>Selling unapproved food items (meat, dairy, refrigerated goods) as "cottage food" is illegal and can result in fines and enforcement action. Never make health claims on your products — this is a federal regulatory violation regardless of your cottage food status. Some counties have additional local restrictions beyond state law — always verify with your county health department.</p></div>
+<div class="note-inline">⚠️ Cottage food regulations can change. Always verify current requirements with the California Department of Public Health (cdph.ca.gov) and your local county health department before selling. This is educational information only and not legal or regulatory advice.</div>`,
+
+plr_books:()=>`
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">📕</span>
+  <span class="detail-badge">Digital · Passive · Beginner</span>
+  <h1 class="detail-title">PLR Content Reselling</h1>
+  <p class="detail-desc">Private Label Rights (PLR) content is pre-written material — ebooks, email sequences, courses, social media posts, blog articles — that you buy the right to edit and resell under your own name and brand. You customize it, give it a new cover and title, and sell it as your own product. Many PLR products cost $5–$30 to purchase and can be resold at $17–$97+.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">$0–$50</div></div>
+    <div class="meta-item"><div class="meta-label">Income Type</div><div class="meta-value">Digital Product Sales — Passive</div></div>
+    <div class="meta-item"><div class="meta-label">Income Potential</div><div class="meta-value">$200–$3,000+/mo</div></div>
+    <div class="meta-item"><div class="meta-label">Difficulty</div><div class="meta-value">Beginner</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 Free & Affordable PLR Sources</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">Free PLR</span><div class="resource-name">PLR.me — Monthly Free PLR Content</div><div class="resource-desc">Create a free account and download free PLR articles, ebooks, and reports monthly. Massive health, wellness, and business content library.</div><a class="resource-link" href="https://www.plr.me" target="_blank">→ plr.me</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free PLR</span><div class="resource-name">IDplr.com — Large Free PLR Library</div><div class="resource-desc">One of the largest free PLR libraries online. Download ebooks, courses, and reports with full resell rights at no cost.</div><a class="resource-link" href="https://www.idplr.com" target="_blank">→ idplr.com</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free PLR</span><div class="resource-name">Free-PLR.com — Totally Free PLR Articles</div><div class="resource-desc">Hundreds of free PLR articles across niches including health, personal finance, recipes, beauty, and self-improvement.</div><a class="resource-link" href="https://www.free-plr.com" target="_blank">→ free-plr.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Sell On</span><div class="resource-name">Gumroad — Sell Your PLR Products</div><div class="resource-desc">Edit, brand, and upload your PLR products to Gumroad. Free to join, takes 10% per sale. Instant digital delivery to buyers.</div><a class="resource-link" href="https://gumroad.com" target="_blank">→ gumroad.com</a></div>
+    <div class="resource-card"><span class="resource-type type-platform">Sell On</span><div class="resource-name">Etsy — Sell PLR-Based Digital Downloads</div><div class="resource-desc">Customized PLR ebooks and guides sell well as Etsy digital downloads. $0.20 per listing, instant delivery to buyers.</div><a class="resource-link" href="https://www.etsy.com/sell" target="_blank">→ etsy.com/sell</a></div>
+  </div>
+</div>
+<div class="tip-box"><div class="tip-box-title">💡 Always Customize First</div><p>Never sell raw PLR as-is — hundreds of other buyers have the same exact content. Rewrite at least 30–50%, add your own examples and insights, update any outdated information, create a new title, design a professional cover in Canva, and add a personal introduction. Your customization dramatically increases perceived value and differentiates your product from all other PLR copies in the market.</p></div>`,
+
+};
+
+// ─── DEFAULT DETAIL for streams without custom pages ───
+function defaultDetail(s){
+  return `
+<button class="back-btn" onclick="showHub()">← All Income Streams</button>
+<div class="detail-hero">
+  <span class="detail-emoji">${s.emoji}</span>
+  <span class="detail-badge">${s.tags.join(' · ')}</span>
+  <h1 class="detail-title">${s.title}</h1>
+  <p class="detail-desc">${s.desc} This is a proven income stream that can be started with minimal overhead and built into a significant income source with consistent effort and the right resources.</p>
+  <div class="detail-meta">
+    <div class="meta-item"><div class="meta-label">Startup Cost</div><div class="meta-value">${s.cost}</div></div>
+    <div class="meta-item"><div class="meta-label">Category</div><div class="meta-value">${s.cat}</div></div>
+    <div class="meta-item"><div class="meta-label">Location</div><div class="meta-value">Remote / Flexible</div></div>
+    <div class="meta-item"><div class="meta-label">Difficulty</div><div class="meta-value">Beginner–Moderate</div></div>
+  </div>
+</div>
+<div class="section-block">
+  <div class="section-title">🔗 Getting Started — Free Resources</div>
+  <div class="resource-grid">
+    <div class="resource-card"><span class="resource-type type-free">Free</span><div class="resource-name">Google — Search "${s.title} how to start 2025"</div><div class="resource-desc">Start with a targeted Google search for the most current beginner guides, tutorials, and platforms for this income stream.</div><a class="resource-link" href="https://www.google.com/search?q=${encodeURIComponent(s.title+' how to start 2025')}" target="_blank">→ Search Google Now</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free</span><div class="resource-name">YouTube — Free Tutorial Videos</div><div class="resource-desc">Search "${s.title} tutorial beginner" on YouTube for free, step-by-step walkthroughs from people already doing it.</div><a class="resource-link" href="https://www.youtube.com/results?search_query=${encodeURIComponent(s.title+' tutorial beginner 2025')}" target="_blank">→ YouTube Tutorials</a></div>
+    <div class="resource-card"><span class="resource-type type-free">Free Courses</span><div class="resource-name">Coursera — Audit Related Courses Free</div><div class="resource-desc">Find courses on this topic and audit them for free. Build real skills without paying for a certificate until you're ready.</div><a class="resource-link" href="https://www.coursera.org/search?query=${encodeURIComponent(s.title)}" target="_blank">→ Coursera — Free Learning</a></div>
+    <div class="resource-card"><span class="resource-type type-research">Community</span><div class="resource-name">Reddit — Real Advice from Practitioners</div><div class="resource-desc">Find active subreddits full of people doing this income stream. Get unfiltered, real-world tips from those already earning.</div><a class="resource-link" href="https://www.reddit.com/search/?q=${encodeURIComponent(s.title)}" target="_blank">→ Reddit Community</a></div>
+  </div>
+</div>
+<div class="note-inline">⚠️ This is educational information only — not financial, legal, or business advice. Research thoroughly and consult qualified professionals before investing time or money into any income stream.</div>`;
+}
+
+// ─── NAVIGATION ───
+function showHub(){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('hub').classList.add('active');
+  window.scrollTo(0,0);
+}
+function showDetail(id){
+  const s=streams.find(x=>x.id===id);
+  if(!s) return;
+  const fn=details[id];
+  document.getElementById('detailContent').innerHTML=fn?fn():defaultDetail(s);
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('detail').classList.add('active');
+  window.scrollTo(0,0);
+}
+
+let currentCat='all';
+let currentSearch='';
+
+function filterCat(cat,el){
+  currentCat=cat;
+  document.querySelectorAll('.cat-tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  renderCards();
+}
+function filterCards(){
+  currentSearch=document.getElementById('searchInput').value.toLowerCase();
+  renderCards();
+}
+function renderCards(){
+  const grid=document.getElementById('streamsGrid');
+  const filtered=streams.filter(s=>{
+    const mc=currentCat==='all'||s.cat===currentCat;
+    const ms=!currentSearch||s.title.toLowerCase().includes(currentSearch)||s.desc.toLowerCase().includes(currentSearch)||s.tags.some(t=>t.toLowerCase().includes(currentSearch));
+    return mc&&ms;
+  });
+  if(!filtered.length){
+    grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--warm-gray);font-size:15px;">No results found. Try a different search term.</div>';
+    return;
+  }
+  grid.innerHTML=filtered.map(s=>`
+    <div class="stream-card" style="--card-color:${s.color};" onclick="showDetail('${s.id}')">
+      <span class="card-emoji">${s.emoji}</span>
+      <div class="card-title">${s.title}</div>
+      <div class="card-desc">${s.desc}</div>
+      <div class="card-meta">
+        ${s.tags.slice(0,2).map(t=>`<span class="card-tag">${t}</span>`).join('')}
+        <span class="card-tag cost">From ${s.cost}</span>
+      </div>
+    </div>`).join('');
+}
+
+document.getElementById('landing').classList.add('active');
+renderCards();
+</script>
+</body>
+</html>
